@@ -83,6 +83,15 @@ PODS:
   - nanopb/encode (2.30906.0)
   - paper-onboarding (6.1.5)
   - PromisesObjC (1.2.11)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxTheme (4.1.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
 
 DEPENDENCIES:
   - Charts
@@ -90,8 +99,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - MonthYearPicker (~> 4.0.2)
+  - MonthYearPicker
   - paper-onboarding
+  - RxTheme
 
 SPEC REPOS:
   trunk:
@@ -112,6 +122,10 @@ SPEC REPOS:
     - nanopb
     - paper-onboarding
     - PromisesObjC
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxTheme
 
 SPEC CHECKSUMS:
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
@@ -131,7 +145,11 @@ SPEC CHECKSUMS:
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   paper-onboarding: fede1799b1da6988f3788e3b71654583c6f3bce1
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTheme: 7cda2f036363a0b620cf07b3480cbbbbb00c1d25
 
-PODFILE CHECKSUM: 6e9166d68c0fbb28869575924f2022891d52e9e9
+PODFILE CHECKSUM: 0ae4c117b8489f7a9967b27fd1d3b14c82e1d1a2
 
 COCOAPODS: 1.10.0

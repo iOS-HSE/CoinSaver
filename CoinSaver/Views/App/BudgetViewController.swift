@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import Foundation
 
 class BudgetViewController: TabItemViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var totalSpent: UILabel!
     @IBOutlet weak var categoriesCV: UICollectionView!
+    @IBOutlet weak var totalSpentTitle: UILabel!
+    @IBOutlet weak var updateExpensesTitle: UILabel!
     
     var clickedCostCategoryName: String?
     var totalSpentNum: Int = 0
+    
+    override func setupTheme() {
+        super.setupTheme()
+        totalSpentTitle.theme.textColor = themed { $0.labelTextColor }
+        updateExpensesTitle.theme.textColor = themed { $0.labelTextColor }
+        totalSpent.theme.textColor = themed { $0.labelTextColor }
+    
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +47,15 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
             print("\(String(describing: self.clickedCostCategoryName)) was updated")
             self.totalSpentNum += Int(updateExpensePopup.expenseAmount.text ?? "0") ?? 0
             self.updateTotalSpent()
+        }
+        setupTheme()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        for cell in categoriesCV.visibleCells {
+            let cell = cell as! CostCategoryCellBudget
+            cell.categoryLabel.theme.textColor = themed { $0.labelTextColor }
         }
     }
     

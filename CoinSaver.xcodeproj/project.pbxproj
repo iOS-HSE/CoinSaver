@@ -41,6 +41,9 @@
 		5264B08C258AAB3700C7E31F /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5264B08B258AAB3700C7E31F /* Switcher.swift */; };
 		528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6D82584A2D200FCA191 /* CircleView.swift */; };
 		528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6EE2584DC7000FCA191 /* IconColorChange.swift */; };
+		52A11F0F258BC034007F3BF4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A11F0E258BC034007F3BF4 /* Theme.swift */; };
+		52A11F18258BD8BA007F3BF4 /* ReactiveTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A11F17258BD8BA007F3BF4 /* ReactiveTheme.swift */; };
+		52A11F1D258BF896007F3BF4 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A11F1C258BF896007F3BF4 /* Popup.swift */; };
 		52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B42583934C000252E8 /* AuthorizationViewController.swift */; };
 		52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */; };
 		52A709CA25839952000252E8 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709C925839952000252E8 /* GoalCardView.swift */; };
@@ -122,6 +125,9 @@
 		5264B08B258AAB3700C7E31F /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
 		528EC6D82584A2D200FCA191 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = SOURCE_ROOT; };
 		528EC6EE2584DC7000FCA191 /* IconColorChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconColorChange.swift; sourceTree = "<group>"; };
+		52A11F0E258BC034007F3BF4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		52A11F17258BD8BA007F3BF4 /* ReactiveTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveTheme.swift; sourceTree = "<group>"; };
+		52A11F1C258BF896007F3BF4 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		52A709B42583934C000252E8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
 		52A709C925839952000252E8 /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 		2EA00D68F376F88DB49994BF = {
 			isa = PBXGroup;
 			children = (
+				52A11F13258BC03B007F3BF4 /* Themes */,
 				52B02A3C257D65FF0024711E /* Resources */,
 				5245BDC12561A3C50002A592 /* Extensions */,
 				2EA0011D8EEA6D54CCC691C7 /* Products */,
@@ -291,8 +298,17 @@
 				528EC6EE2584DC7000FCA191 /* IconColorChange.swift */,
 				52C2981C2585F0A80073B876 /* IconButton.swift */,
 				52C298252585F7A30073B876 /* HexColor.swift */,
+				52A11F17258BD8BA007F3BF4 /* ReactiveTheme.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52A11F13258BC03B007F3BF4 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				52A11F0E258BC034007F3BF4 /* Theme.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		52A709DB2583D5EF000252E8 /* Authorization */ = {
@@ -340,6 +356,7 @@
 				52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */,
 				523C9D222584912800389A4C /* DatePickerPopup.swift */,
 				5264B086258A94BB00C7E31F /* AddExpensePopup.swift */,
+				52A11F1C258BF896007F3BF4 /* Popup.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -587,6 +604,10 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
@@ -604,6 +625,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
@@ -653,6 +678,10 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTheme/RxTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
@@ -670,6 +699,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
@@ -688,8 +721,10 @@
 			files = (
 				5264B08C258AAB3700C7E31F /* Switcher.swift in Sources */,
 				521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */,
+				52A11F1D258BF896007F3BF4 /* Popup.swift in Sources */,
 				5217BE4B25854EA7000FDEDA /* Consts.swift in Sources */,
 				2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */,
+				52A11F18258BD8BA007F3BF4 /* ReactiveTheme.swift in Sources */,
 				5217BE4525854D1B000FDEDA /* CostCategoryCell.swift in Sources */,
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
 				52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */,
@@ -709,6 +744,7 @@
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
 				52C2982F25860E9B0073B876 /* BasicUserSettings.swift in Sources */,
 				521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */,
+				52A11F0F258BC034007F3BF4 /* Theme.swift in Sources */,
 				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
 				52C298402586288A0073B876 /* NavigationController.swift in Sources */,
 				523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 import MonthYearPicker
 
-class DatePickerPopup: UIViewController {
+class DatePickerPopup: Popup {
 
     
     @IBOutlet weak var saveButton: UIButton!

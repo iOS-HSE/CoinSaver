@@ -8,7 +8,7 @@
 import UIKit
 
 class CostCategoryCellBudget: CostCategoryCell {
-
+    
     override func categorySelected(_ sender: UIButton) {
         NotificationCenter.default.post(name: .updateCategory, object: self)
     }

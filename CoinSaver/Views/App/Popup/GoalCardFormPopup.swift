@@ -12,7 +12,18 @@ let zeroDependentCosts = ErrorAlert(alertMessage: "Goal should depend at least o
 let emptyGoalTitle = ErrorAlert(alertMessage: "Goal title cannot be empty")
 let incorrectLimit = ErrorAlert(alertMessage: "Limit should be a number")
 
-class GoalCardFormPopup: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class GoalCardFormPopup: Popup, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var goalCardPopupView: UIView!
+    @IBOutlet weak var goalTitle: UILabel!
+    @IBOutlet weak var goalLimitTitle: UILabel!
+    @IBOutlet weak var dependentCostsTitle: UILabel!
+    
+    
+    @IBOutlet weak var goalTitleTextField: UITextField!
+    @IBOutlet weak var dependentCostsList: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var goalLimit: UITextField!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Consts.dependentCosts.count
@@ -27,11 +38,6 @@ class GoalCardFormPopup: UIViewController, UITableViewDelegate, UITableViewDataS
         
         return cell
     }
-    
-    @IBOutlet weak var goalTitleTextField: UITextField!
-    @IBOutlet weak var dependentCostsList: UITableView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var goalLimit: UITextField!
     
     @IBAction func saveGoal(_ sender: UIButton) {
         if goalTitleTextField.text == "" {

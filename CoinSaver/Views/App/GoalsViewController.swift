@@ -16,6 +16,11 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
     
     var goalCards: [GoalCard] = []
     
+    override func setupTheme() {
+        super.setupTheme()
+        tableView.theme.backgroundColor = themed { $0.backgroundColor }
+    }
+    
     @objc func showNewGoalFormPopup(_ sender: UIButton) {
         let sb = UIStoryboard(name: "GoalFormPopup", bundle: nil)
         let popup = sb.instantiateInitialViewController() as! GoalCardFormPopup
@@ -87,6 +92,7 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
         
         return nil
     }
+
 }
 
 func getStatusValue(status: GoalStatus) -> String {

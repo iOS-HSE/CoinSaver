@@ -28,12 +28,26 @@ class BoardViewController: TabItemViewController {
     @IBOutlet weak var totalSaved: UILabel!
     @IBOutlet weak var changeIcon: UIImageView!
     @IBOutlet weak var percentSaved: UILabel!
+    @IBOutlet weak var totalSavedTitle: UILabel!
+    @IBOutlet weak var totalCostsTitle: UILabel!
     
     @IBOutlet weak var topCostsPieChart: PieChartView!
     
     var topCost1 = PieChartDataEntry(value: 0)
     var topCost2 = PieChartDataEntry(value: 0)
     var topCost3 = PieChartDataEntry(value: 0)
+    
+    override func setupTheme() {
+        super.setupTheme()
+        totalCostsView.theme.borderColor = themed { $0.black }
+        topCostsPieChart.theme.legendTextColor = themed { $0.black }
+        totalSaved.theme.textColor = themed { $0.black }
+        percentSaved.theme.textColor = themed { $0.black }
+        dateLabel.theme.textColor = themed { $0.labelTextColor }
+        selectDateButton.theme.tintColor = themed { $0.labelTextColor }
+        totalSavedTitle.theme.textColor = themed { $0.black }
+        totalCostsTitle.theme.textColor = themed { $0.black }
+    }
     
     var topCostsData = [
         "tc1": 15,
