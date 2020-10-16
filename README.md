@@ -30,7 +30,7 @@
 #### Sign in (Вход)
 ![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/sign%20in.png)
 #### Sign up (Регистрация)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screenssign%20up.png)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/sign%20up.png)
 #### Success (Успешное действие)
 ![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/success.png)
 
