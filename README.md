@@ -18,20 +18,20 @@
 ### Страницы приложения:
 
 #### Board (Main page)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/board.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/board.png)
 #### Start page (Если пользователеь еще не вошел)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/start.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/start.png)
 #### Budget (Выбрать категории траты)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/budget.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/budget.png)
 #### Goals (Цели)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/goals.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/goals.png)
 #### Settings (Настройки)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/settings.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/settings.png)
 #### Sign in (Вход)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/sign%20in.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/sign%20in.png)
 #### Sign up (Регистрация)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screenssign%20up.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screenssign%20up.png)
 #### Success (Успешное действие)
-![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/success.jpg)
+![Board.jpg](https://github.com/iOS-HSE/CoinSaver/blob/master/screens/success.png)
 
 
