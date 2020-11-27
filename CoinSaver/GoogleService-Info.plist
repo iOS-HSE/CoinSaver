@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>882841068985-ke4vp18n2p4i35rmht7s84t4va67g5b7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.882841068985-ke4vp18n2p4i35rmht7s84t4va67g5b7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDMVGZelnxPUsOQ5zpwH7Tlx4ULzFTkS_0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>882841068985</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>hse.CoinSaver</string>
+	<key>PROJECT_ID</key>
+	<string>coinsaver-b197b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>coinsaver-b197b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:882841068985:ios:1e518eccc388cd29cb8268</string>
+	<key>DATABASE_URL</key>
+	<string>https://coinsaver-b197b.firebaseio.com</string>
+</dict>
+</plist>
