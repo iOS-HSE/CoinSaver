@@ -20,29 +20,33 @@ class SignInViewController: UIViewController {
         passwordInput.delegate = self
     }
     
-    func signingIn() -> Bool{
+    func signingIn(){
         let email = loginInput.text!
         let password = passwordInput.text!
-        var res = false
         if (!email.isEmpty && !password.isEmpty){
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
-                if error==nil{
-                    res = true
-                    self.performSegue(withIdentifier: "signinSuccess", sender: nil) } //костыль!
-                else{
-                    let alert = UIAlertController(title: "Ошибка", message: "Проверьте почту и пароль", preferredStyle: .alert)
+            Auth.auth().signIn(withEmail: email, password: password, completion: { [self] (result, error) in
+                if (error != nil){
+                    let alert = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: false, completion: nil)
                 }
             })
         }
-        return res
+        else{
+            let alert = UIAlertController(title: "Ошибка", message: "Все поля должны быть заполнены", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: false, completion: nil)
+        }
     }
     
     
-    @IBAction func signinAction(_ sender: Any) {
-        if signingIn(){
-        performSegue(withIdentifier: "signinSuccess", sender: nil)}
+    @IBAction func signInAction(_ sender: Any) {
+        Auth.auth().addStateDidChangeListener({(auth, user) in
+            if (user != nil){
+                self.performSegue(withIdentifier: "signInSuccess", sender: nil)
+            }
+        })
+        signingIn()
         
     }
     
@@ -51,8 +55,12 @@ class SignInViewController: UIViewController {
 
 extension SignInViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if signingIn(){
-        performSegue(withIdentifier: "signinSuccess", sender: nil)}
+        Auth.auth().addStateDidChangeListener({(auth, user) in
+            if (user == nil){
+                self.performSegue(withIdentifier: "signInSuccess", sender: nil)
+            }
+        })
+        signingIn()
         return true
     }
 }
