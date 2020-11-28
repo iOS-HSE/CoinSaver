@@ -19,20 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         Auth.auth().addStateDidChangeListener({(auth, user) in
             if (user == nil){
-                self.showModalAuth()
-            }
-        })
+                self.showView(viewname:"AuthViewController")
+            }else{
+                self.showView(viewname:"TabBarViewController") 
+            }        })
         return true
     }
 
-    func showModalAuth(){
+    func showView(viewname:String){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let newvc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        let newvc = storyboard.instantiateViewController(withIdentifier: viewname)
         self.window?.rootViewController?.present(newvc, animated: false, completion: nil)
     }
-    // MARK: UISceneSession Lifecycle
-
-
+    
+       
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
