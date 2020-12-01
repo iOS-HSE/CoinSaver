@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: TabItemViewController {
 
@@ -14,4 +15,12 @@ class SettingsViewController: TabItemViewController {
         self.navigationItem.title = "Settings"
     }
     
+    @IBAction func logoutAction(_ sender: Any) {
+        do{
+            try Auth.auth().signOut()
+        }catch{
+            print ("Sign out Error")
+        }
+        performSegue(withIdentifier: "toAuth", sender: nil)
+    }
 }

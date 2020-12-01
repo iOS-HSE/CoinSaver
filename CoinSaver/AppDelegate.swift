@@ -12,18 +12,22 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-    return true
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let user = Auth.auth().currentUser // does not work TODO: how to cache user????
+        var vc:UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        if user==nil{
+            vc = storyboard.instantiateViewController(withIdentifier: "AuthViewController") as! AuthViewController
+        }
+        self.window?.rootViewController?.present(vc, animated: true, completion: nil)
+        return true
     }
 
-
-    // MARK: UISceneSession Lifecycle
-
-
+       
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
