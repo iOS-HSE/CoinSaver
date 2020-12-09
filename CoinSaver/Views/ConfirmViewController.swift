@@ -9,13 +9,13 @@ import UIKit
 
 class ConfirmViewController: UIViewController {
 
+    @IBOutlet weak var sliderCollectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Confirmation"
-        do{
-            sleep(2)
-        }
-        performSegue(withIdentifier: "signupSuccess", sender: nil)
+        
+        self.performSegue(withIdentifier: "afterGetStarted", sender: nil)
     }
     
 
