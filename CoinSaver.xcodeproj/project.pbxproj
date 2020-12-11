@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2257103484157F948B4027D6 /* Pods_CoinSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */; };
 		2EA0009AAB6C8B3E274985C6 /* CoinSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00C65255734D68C5B0A61 /* CoinSaverUITests.swift */; };
 		2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00697FFD3420274800FBC /* AppDelegate.swift */; };
 		2EA005A303AE118B614CACA4 /* CoinSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0035FBE7210EA6160042E /* CoinSaverTests.swift */; };
@@ -25,6 +26,10 @@
 		5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAF25619A600002A592 /* GoalsViewController.swift */; };
 		5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDB425619A6D0002A592 /* BudgetViewController.swift */; };
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
+		808A116D0229CCBDEE20C6F5 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */; };
+		B811D50EAD2B2C5F0CAC8307 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */; };
+		C339B0DD257167FC004D0B69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */; };
+		C3F7B84D25837A13009DC475 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		2EA00120861F5FF41C7F8623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2EA0027DBDA06EFDB89EB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2EA0035FBE7210EA6160042E /* CoinSaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSaverTests.swift; sourceTree = "<group>"; };
@@ -59,6 +65,7 @@
 		2EA00DB429D707431985A63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2EA00E5F6CFE49B640FBD61C /* CoinSaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinSaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA00FA56F0F8DC677B3D7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
 		521813D5255F19BF00489CE9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		521813DD255F19D700489CE9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		521813E5255F1B4F00489CE9 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +76,15 @@
 		5245BDAF25619A600002A592 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		5245BDB425619A6D0002A592 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
+		55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.release.xcconfig"; sourceTree = "<group>"; };
+		5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
+		C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				808A116D0229CCBDEE20C6F5 /* Pods_CoinSaverTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B811D50EAD2B2C5F0CAC8307 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2257103484157F948B4027D6 /* Pods_CoinSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +153,7 @@
 				2EA005F57D24AFB44D504A46 /* LaunchScreen.storyboard */,
 				2EA00DB429D707431985A63B /* SceneDelegate.swift */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
+				C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */,
 				2EA002F550F486A58546C7CB /* Main.storyboard */,
 			);
 			path = CoinSaver;
@@ -147,6 +167,8 @@
 				2EA00C96E44106F201DFE980 /* CoinSaver */,
 				2EA0026881BA21A57062B56A /* CoinSaverTests */,
 				2EA00B41B84C651D9B78D068 /* CoinSaverUITests */,
+				C7F05D0C169BBDC271283EB2 /* Pods */,
+				657F403A6BD7A0D19EC7B64C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +179,7 @@
 				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
 				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
 				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
+				C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */,
 				5245BDA0256189770002A592 /* BoardViewController.swift */,
 				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
 				5245BDAA256198270002A592 /* SettingsViewController.swift */,
@@ -174,6 +197,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		657F403A6BD7A0D19EC7B64C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */,
+				C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */,
+				BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7F05D0C169BBDC271283EB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */,
+				55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */,
+				5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */,
+				9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */,
+				2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */,
+				D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +227,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA006C6477609CD0983E193 /* Build configuration list for PBXNativeTarget "CoinSaverTests" */;
 			buildPhases = (
+				9FAEDF30FF354A67BAEE672D /* [CP] Check Pods Manifest.lock */,
 				2EA00D9D27D06E4DCE157FC5 /* Sources */,
 				2EA00108352EC086ABC91BA5 /* Frameworks */,
 				2EA00CF3A818C5A3AA611AD0 /* Resources */,
@@ -199,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA00A8AA08F37D7C0A36A28 /* Build configuration list for PBXNativeTarget "CoinSaver" */;
 			buildPhases = (
+				7BCA692730423AAD55FF6AB6 /* [CP] Check Pods Manifest.lock */,
 				2EA003C2F702C7CA90700923 /* Sources */,
 				2EA00EE9819D076B62B2D53E /* Frameworks */,
 				2EA003DFDBB896EDAC1BF810 /* Resources */,
+				406A36BDE3C5B0DB538F9300 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA0055A8C0F7513403E8929 /* Build configuration list for PBXNativeTarget "CoinSaverUITests" */;
 			buildPhases = (
+				3B7A37E855FA90D8FD6738B2 /* [CP] Check Pods Manifest.lock */,
 				2EA0070C377B35C08DF08151 /* Sources */,
 				2EA00C8464B3CF86D1F68A8A /* Frameworks */,
 				2EA00643C9D7F01CA6B8D027 /* Resources */,
+				3D2DEDF77947FCC18C32F742 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EA00A24C1B048C2794D0BAE /* Assets.xcassets in Resources */,
+				C339B0DD257167FC004D0B69 /* GoogleService-Info.plist in Resources */,
 				2EA00A43AEB9558D5D6BA550 /* LaunchScreen.storyboard in Resources */,
 				2EA00B4A96EF7865E3D5B2FE /* Main.storyboard in Resources */,
 			);
@@ -285,6 +337,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B7A37E855FA90D8FD6738B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinSaver-CoinSaverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D2DEDF77947FCC18C32F742 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		406A36BDE3C5B0DB538F9300 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BCA692730423AAD55FF6AB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinSaver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FAEDF30FF354A67BAEE672D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoinSaverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2EA003C2F702C7CA90700923 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -301,6 +498,7 @@
 				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
 				521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */,
 				5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */,
+				C3F7B84D25837A13009DC475 /* GetStartedCollectionViewCell.swift in Sources */,
 				5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */,
 				2EA0096B271B8BF8D4359EF4 /* ViewController.swift in Sources */,
 			);
@@ -359,6 +557,7 @@
 /* Begin XCBuildConfiguration section */
 		2EA0035860361AB68298F0BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -373,6 +572,7 @@
 		};
 		2EA0049E630B6A05F9FAF93C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoinSaverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -386,6 +586,7 @@
 		};
 		2EA005B6185E275C4ED30020 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinSaver.app/CoinSaver";
 				INFOPLIST_FILE = CoinSaverTests/Info.plist;
@@ -400,6 +601,7 @@
 		};
 		2EA005DD3FC3273E18E8EB4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinSaver.app/CoinSaver";
 				INFOPLIST_FILE = CoinSaverTests/Info.plist;
@@ -476,6 +678,7 @@
 		};
 		2EA00A8FAE6709F34E5B9C0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoinSaverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -489,6 +692,7 @@
 		};
 		2EA00C8D571435F0649BC9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
