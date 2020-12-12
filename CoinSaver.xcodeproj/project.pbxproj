@@ -19,6 +19,9 @@
 		521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813D5255F19BF00489CE9 /* SignInViewController.swift */; };
 		521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813DD255F19D700489CE9 /* SignUpViewController.swift */; };
 		521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813E5255F1B4F00489CE9 /* AuthViewController.swift */; };
+		521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A26B42583EDF30085725A /* GoalFormPopup.storyboard */; };
+		521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */; };
+		521A26C52584109C0085725A /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26C42584109C0085725A /* NotificationNameExtension.swift */; };
 		5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BD9325617B360002A592 /* ConfirmViewController.swift */; };
 		5245BDA1256189770002A592 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA0256189770002A592 /* BoardViewController.swift */; };
 		5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA525618CDC0002A592 /* TabBarViewController.swift */; };
@@ -28,9 +31,10 @@
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
 		52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B42583934C000252E8 /* AuthorizationViewController.swift */; };
 		52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */; };
+		52A709CA25839952000252E8 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709C925839952000252E8 /* GoalCardView.swift */; };
+		52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */; };
+		52A709F32583DB3F000252E8 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709F22583DB3F000252E8 /* FloatingButton.swift */; };
 		52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B02A40257D66370024711E /* GoogleService-Info.plist */; };
-		52B02A58257D6A1D0024711E /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B02A57257D6A1D0024711E /* GoalCardView.swift */; };
-		52B02A5D257D72A70024711E /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B02A5C257D72A70024711E /* FloatingButton.swift */; };
 		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
 		A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +77,9 @@
 		521813D5255F19BF00489CE9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		521813DD255F19D700489CE9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		521813E5255F1B4F00489CE9 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		521A26B42583EDF30085725A /* GoalFormPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalFormPopup.storyboard; sourceTree = "<group>"; };
+		521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardFormPopupCell.swift; sourceTree = "<group>"; };
+		521A26C42584109C0085725A /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationNameExtension.swift; path = CoinSaver/Views/App/Elements/NotificationNameExtension.swift; sourceTree = SOURCE_ROOT; };
 		5245BD9325617B360002A592 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		5245BDA0256189770002A592 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		5245BDA525618CDC0002A592 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +89,10 @@
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		52A709B42583934C000252E8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
+		52A709C925839952000252E8 /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
+		52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardFormPopup.swift; sourceTree = "<group>"; };
+		52A709F22583DB3F000252E8 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = CoinSaver/Views/App/Elements/FloatingButton.swift; sourceTree = SOURCE_ROOT; };
 		52B02A40257D66370024711E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "CoinSaver/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		52B02A57257D6A1D0024711E /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
-		52B02A5C257D72A70024711E /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = CoinSaver/Custom/FloatingButton.swift; sourceTree = SOURCE_ROOT; };
 		99BB027AB7D3FDEC0DCAC269 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9EFEFDDE3AB52C546ADC6D7B /* Pods-CoinSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.release.xcconfig"; sourceTree = "<group>"; };
 		A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +173,6 @@
 		2EA00C96E44106F201DFE980 /* CoinSaver */ = {
 			isa = PBXGroup;
 			children = (
-				52B02A56257D69E20024711E /* Custom */,
 				521813CC255F18F600489CE9 /* Views */,
 				2EA00120861F5FF41C7F8623 /* Info.plist */,
 				2EA006CE0C0EC68597CBA2B7 /* Assets.xcassets */,
@@ -174,6 +181,7 @@
 				2EA00DB429D707431985A63B /* SceneDelegate.swift */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
 				2EA002F550F486A58546C7CB /* Main.storyboard */,
+				521A26B42583EDF30085725A /* GoalFormPopup.storyboard */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -195,18 +203,8 @@
 		521813CC255F18F600489CE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52A709B42583934C000252E8 /* AuthorizationViewController.swift */,
-				52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */,
-				521813D5255F19BF00489CE9 /* SignInViewController.swift */,
-				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
-				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
-				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
-				5245BDA0256189770002A592 /* BoardViewController.swift */,
-				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
-				5245BDAA256198270002A592 /* SettingsViewController.swift */,
-				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
-				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
-				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
+				52A709DC2583D61A000252E8 /* App */,
+				52A709DB2583D5EF000252E8 /* Authorization */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,9 +212,54 @@
 		5245BDC12561A3C50002A592 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				52B02A5C257D72A70024711E /* FloatingButton.swift */,
+				52A709F22583DB3F000252E8 /* FloatingButton.swift */,
+				521A26C42584109C0085725A /* NotificationNameExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52A709DB2583D5EF000252E8 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				52A709B42583934C000252E8 /* AuthorizationViewController.swift */,
+				52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */,
+				521813D5255F19BF00489CE9 /* SignInViewController.swift */,
+				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
+				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
+				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		52A709DC2583D61A000252E8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52A709DE2583D745000252E8 /* Popup */,
+				52B02A56257D69E20024711E /* Elements */,
+				52A709DD2583D637000252E8 /* Base */,
+				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
+				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
+				5245BDAA256198270002A592 /* SettingsViewController.swift */,
+				5245BDA0256189770002A592 /* BoardViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		52A709DD2583D637000252E8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
+				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		52A709DE2583D745000252E8 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		52B02A3C257D65FF0024711E /* Resources */ = {
@@ -227,12 +270,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		52B02A56257D69E20024711E /* Custom */ = {
+		52B02A56257D69E20024711E /* Elements */ = {
 			isa = PBXGroup;
 			children = (
-				52B02A57257D6A1D0024711E /* GoalCardView.swift */,
+				52A709C925839952000252E8 /* GoalCardView.swift */,
+				521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */,
 			);
-			path = Custom;
+			path = Elements;
 			sourceTree = "<group>";
 		};
 		8F64DBB02B631CB251A2ED94 /* Frameworks */ = {
@@ -341,6 +385,7 @@
 			files = (
 				2EA00A24C1B048C2794D0BAE /* Assets.xcassets in Resources */,
 				52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */,
+				521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */,
 				2EA00A43AEB9558D5D6BA550 /* LaunchScreen.storyboard in Resources */,
 				2EA00B4A96EF7865E3D5B2FE /* Main.storyboard in Resources */,
 			);
@@ -514,12 +559,13 @@
 			files = (
 				521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */,
 				2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */,
-				52B02A5D257D72A70024711E /* FloatingButton.swift in Sources */,
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
 				52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */,
+				52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */,
+				52A709F32583DB3F000252E8 /* FloatingButton.swift in Sources */,
 				52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */,
 				2EA0064EF8B61CE34F9B9267 /* SceneDelegate.swift in Sources */,
-				52B02A58257D6A1D0024711E /* GoalCardView.swift in Sources */,
+				52A709CA25839952000252E8 /* GoalCardView.swift in Sources */,
 				5245BDAB256198270002A592 /* SettingsViewController.swift in Sources */,
 				5245BDA1256189770002A592 /* BoardViewController.swift in Sources */,
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
@@ -528,7 +574,9 @@
 				521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */,
 				5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */,
 				5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */,
+				521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */,
 				2EA0096B271B8BF8D4359EF4 /* ViewController.swift in Sources */,
+				521A26C52584109C0085725A /* NotificationNameExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

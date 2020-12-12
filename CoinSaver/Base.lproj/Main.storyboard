@@ -69,6 +69,16 @@
                                     <segue destination="DVS-Be-JQl" kind="show" id="Qja-mU-lFe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUC-Uz-LXH">
+                                <rect key="frame" x="209" y="598" width="174" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BUTTON">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bT3-hO-tFV" kind="show" id="5RV-Ec-SKR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.94509803920000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1623.1884057971015" y="75.669642857142847"/>
+            <point key="canvasLocation" x="1623.1884057971015" y="75"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="2jF-d3-AbZ">
@@ -227,12 +237,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bet-li-2lI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bet-li-2lI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="623"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mJK-E5-nTj">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cardCell" id="mJK-E5-nTj" customClass="GoalCardView" customModule="CoinSaver" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mJK-E5-nTj" id="c6Y-8y-nBa">
@@ -268,10 +277,6 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTV-DW-5m9">
-                                                            <rect key="frame" x="370" y="8" width="16" height="16"/>
-                                                            <state key="normal" image="edit"/>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.94509803920000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -284,8 +289,6 @@
                                                         <constraint firstItem="fHH-hf-xuY" firstAttribute="leading" secondItem="DNU-OZ-6fw" secondAttribute="leading" constant="20" id="mpJ-qd-0v3"/>
                                                         <constraint firstItem="NdO-kD-tZF" firstAttribute="top" secondItem="hZD-hA-6SK" secondAttribute="bottom" constant="10" id="s7i-H6-yfh"/>
                                                         <constraint firstItem="09G-c6-iT5" firstAttribute="leading" secondItem="DNU-OZ-6fw" secondAttribute="leading" constant="20" id="ssP-Sh-bGo"/>
-                                                        <constraint firstAttribute="trailing" secondItem="kTV-DW-5m9" secondAttribute="trailing" constant="10" id="ub4-WP-jL1"/>
-                                                        <constraint firstItem="kTV-DW-5m9" firstAttribute="top" secondItem="DNU-OZ-6fw" secondAttribute="top" constant="10" id="vcW-Fg-G8z"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -296,17 +299,28 @@
                                                 <constraint firstItem="DNU-OZ-6fw" firstAttribute="leading" secondItem="c6Y-8y-nBa" secondAttribute="leading" constant="10" id="mTx-Rd-5g0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardTitle" destination="hZD-hA-6SK" id="vvx-GT-hZ0"/>
+                                            <outlet property="cardView" destination="DNU-OZ-6fw" id="RaZ-Gd-3mq"/>
+                                            <outlet property="goalProgress" destination="fHH-hf-xuY" id="Nzl-Y1-bQO"/>
+                                            <outlet property="statusLabel" destination="NdO-kD-tZF" id="Cxz-SS-K8X"/>
+                                            <outlet property="statusValue" destination="09G-c6-iT5" id="wsA-WV-6Xa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bT3-hO-tFV" id="tju-ZZ-XaG"/>
+                                    <outlet property="delegate" destination="bT3-hO-tFV" id="FV8-9s-hTk"/>
+                                </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J0m-Lv-omB">
-                                <rect key="frame" x="350" y="600" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qox-lF-c6b">
+                                <rect key="frame" x="338" y="591" width="56" height="56"/>
                                 <color key="backgroundColor" red="1" green="0.80392156859999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="0.80392156859999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="add">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="UC0-wA-PL5"/>
+                                    <constraint firstAttribute="width" constant="56" id="zad-87-h8p"/>
+                                </constraints>
+                                <state key="normal" image="add"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0cd-17-nup"/>
@@ -317,13 +331,16 @@
                             <constraint firstItem="Bet-li-2lI" firstAttribute="trailing" secondItem="0cd-17-nup" secondAttribute="trailing" id="8lB-R3-Bei"/>
                             <constraint firstItem="0cd-17-nup" firstAttribute="bottom" secondItem="Bet-li-2lI" secondAttribute="bottom" id="Jzm-Fb-fvy"/>
                             <constraint firstItem="Bet-li-2lI" firstAttribute="top" secondItem="0cd-17-nup" secondAttribute="top" id="Uga-sV-W9z"/>
+                            <constraint firstItem="0cd-17-nup" firstAttribute="bottom" secondItem="qox-lF-c6b" secondAttribute="bottom" constant="20" id="c0O-Ie-tTH"/>
+                            <constraint firstItem="0cd-17-nup" firstAttribute="trailing" secondItem="qox-lF-c6b" secondAttribute="trailing" constant="20" id="dBp-9q-Avb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="todo" id="pWZ-LT-GsJ">
+                    <tabBarItem key="tabBarItem" title="" image="todo" id="sYZ-Xc-8BB">
                         <color key="badgeColor" red="1" green="0.80392156859999997" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addButton" destination="J0m-Lv-omB" id="reY-LZ-qYf"/>
+                        <outlet property="addButton" destination="qox-lF-c6b" id="Ki9-eB-aRC"/>
                         <outlet property="tableView" destination="Bet-li-2lI" id="nx2-4y-gkE"/>
                     </connections>
                 </viewController>
@@ -523,7 +540,7 @@
             </objects>
             <point key="canvasLocation" x="6982.6086956521749" y="472.76785714285711"/>
         </scene>
-        <!--Item-->
+        <!--Board View Controller-->
         <scene sceneID="hEq-cl-7Im">
             <objects>
                 <viewController id="bfi-Xo-ole" customClass="BoardViewController" customModule="CoinSaver" customModuleProvider="target" sceneMemberID="viewController">
@@ -534,7 +551,7 @@
                         <color key="backgroundColor" red="1" green="0.94509803920000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="home" id="pHf-Yh-gHV"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="pHf-Yh-gHV"/>
                     <navigationItem key="navigationItem" id="bN7-Dm-pdM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -576,6 +593,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VHr-FL-RqQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sAT-xY-xKd"/>
                     </connections>
@@ -676,7 +696,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="LpU-tY-P1G"/>
-        <segue reference="InB-96-jWx"/>
+        <segue reference="eKP-1u-JQ7"/>
+        <segue reference="5RV-Ec-SKR"/>
         <segue reference="Qja-mU-lFe"/>
         <segue reference="UQi-Ge-bya"/>
     </inferredMetricsTieBreakers>
@@ -684,7 +705,6 @@
         <image name="Logo" width="128" height="128"/>
         <image name="add" width="16" height="16"/>
         <image name="budget" width="21.333333969116211" height="21.333333969116211"/>
-        <image name="edit" width="10.666666984558105" height="10.666666984558105"/>
         <image name="home" width="21.333333969116211" height="21.333333969116211"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="settings" width="21.333333969116211" height="21.333333969116211"/>
