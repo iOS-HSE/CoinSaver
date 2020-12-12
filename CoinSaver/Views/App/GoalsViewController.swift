@@ -53,6 +53,7 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Goals"
+        self.addButton.initFloatingButton()
         self.addButton.addTarget(self, action: #selector(showNewGoalFormPopup), for: .touchUpInside)
         self.tableView.tableFooterView = UIView()
         

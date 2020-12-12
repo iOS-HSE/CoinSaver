@@ -8,4 +8,5 @@
 import Foundation
 extension Notification.Name {
     static let saveCard = Notification.Name(rawValue: "saveCard")
+    static let saveDate = Notification.Name(rawValue: "saveDate")
 }

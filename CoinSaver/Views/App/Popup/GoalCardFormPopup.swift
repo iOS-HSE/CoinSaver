@@ -35,8 +35,6 @@ class GoalCardFormPopup: UIViewController, UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-
-    
     @IBOutlet weak var goalTitleTextField: UITextField!
     @IBOutlet weak var dependentCostsList: UITableView!
     @IBOutlet weak var saveButton: UIButton!

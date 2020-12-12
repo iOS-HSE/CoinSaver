@@ -22,6 +22,8 @@
 		521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A26B42583EDF30085725A /* GoalFormPopup.storyboard */; };
 		521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */; };
 		521A26C52584109C0085725A /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26C42584109C0085725A /* NotificationNameExtension.swift */; };
+		523C9D1E25848F0700389A4C /* DatePickerPopupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */; };
+		523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C9D222584912800389A4C /* DatePickerPopup.swift */; };
 		5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BD9325617B360002A592 /* ConfirmViewController.swift */; };
 		5245BDA1256189770002A592 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA0256189770002A592 /* BoardViewController.swift */; };
 		5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA525618CDC0002A592 /* TabBarViewController.swift */; };
@@ -29,6 +31,8 @@
 		5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAF25619A600002A592 /* GoalsViewController.swift */; };
 		5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDB425619A6D0002A592 /* BudgetViewController.swift */; };
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
+		528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6D82584A2D200FCA191 /* CircleView.swift */; };
+		528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6EE2584DC7000FCA191 /* IconColorChange.swift */; };
 		52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B42583934C000252E8 /* AuthorizationViewController.swift */; };
 		52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */; };
 		52A709CA25839952000252E8 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709C925839952000252E8 /* GoalCardView.swift */; };
@@ -80,6 +84,8 @@
 		521A26B42583EDF30085725A /* GoalFormPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalFormPopup.storyboard; sourceTree = "<group>"; };
 		521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardFormPopupCell.swift; sourceTree = "<group>"; };
 		521A26C42584109C0085725A /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationNameExtension.swift; path = CoinSaver/Views/App/Elements/NotificationNameExtension.swift; sourceTree = SOURCE_ROOT; };
+		523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePickerPopupStoryboard.storyboard; sourceTree = "<group>"; };
+		523C9D222584912800389A4C /* DatePickerPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPopup.swift; sourceTree = "<group>"; };
 		5245BD9325617B360002A592 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		5245BDA0256189770002A592 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		5245BDA525618CDC0002A592 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,8 @@
 		5245BDAF25619A600002A592 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		5245BDB425619A6D0002A592 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
+		528EC6D82584A2D200FCA191 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = SOURCE_ROOT; };
+		528EC6EE2584DC7000FCA191 /* IconColorChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconColorChange.swift; sourceTree = "<group>"; };
 		52A709B42583934C000252E8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
 		52A709C925839952000252E8 /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
 				2EA002F550F486A58546C7CB /* Main.storyboard */,
 				521A26B42583EDF30085725A /* GoalFormPopup.storyboard */,
+				523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -214,6 +223,8 @@
 			children = (
 				52A709F22583DB3F000252E8 /* FloatingButton.swift */,
 				521A26C42584109C0085725A /* NotificationNameExtension.swift */,
+				528EC6D82584A2D200FCA191 /* CircleView.swift */,
+				528EC6EE2584DC7000FCA191 /* IconColorChange.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */,
+				523C9D222584912800389A4C /* DatePickerPopup.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -387,6 +399,7 @@
 				52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */,
 				521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */,
 				2EA00A43AEB9558D5D6BA550 /* LaunchScreen.storyboard in Resources */,
+				523C9D1E25848F0700389A4C /* DatePickerPopupStoryboard.storyboard in Resources */,
 				2EA00B4A96EF7865E3D5B2FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +472,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
@@ -467,12 +481,14 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
@@ -481,6 +497,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -519,6 +536,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
@@ -527,12 +545,14 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
@@ -541,6 +561,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -562,7 +583,9 @@
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
 				52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */,
 				52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */,
+				528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */,
 				52A709F32583DB3F000252E8 /* FloatingButton.swift in Sources */,
+				528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */,
 				52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */,
 				2EA0064EF8B61CE34F9B9267 /* SceneDelegate.swift in Sources */,
 				52A709CA25839952000252E8 /* GoalCardView.swift in Sources */,
@@ -571,6 +594,7 @@
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
 				521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */,
 				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
+				523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */,
 				521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */,
 				5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */,
 				5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */,
