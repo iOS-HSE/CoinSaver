@@ -7,29 +7,17 @@
 
 import UIKit
 
-let dependentCosts = [
-    "Health",
-    "Food",
-    "Travels",
-    "Entertainment",
-    "Utily",
-    "Technics",
-    "Household products",
-    "Services"
-]
-
 class GoalCardFormPopup: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dependentCosts.count
+        Consts.dependentCosts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "dependentCostCell", for: indexPath) as! GoalCardFormPopupCell
         
-        cell.dependentCostLabel.text = dependentCosts[indexPath.row]
+        cell.dependentCostLabel.text = Array(Consts.dependentCosts.keys)[indexPath.row]
         cell.isDependent.setOn(false, animated: true)
         
         return cell

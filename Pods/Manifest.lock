@@ -81,6 +81,7 @@ PODS:
     - nanopb/encode (= 2.30906.0)
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
+  - paper-onboarding (6.1.5)
   - PromisesObjC (1.2.11)
 
 DEPENDENCIES:
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - MonthYearPicker (~> 4.0.2)
+  - paper-onboarding
 
 SPEC REPOS:
   trunk:
@@ -108,6 +110,7 @@ SPEC REPOS:
     - leveldb-library
     - MonthYearPicker
     - nanopb
+    - paper-onboarding
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -126,8 +129,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MonthYearPicker: 91f77106e6806d8c93c69e943ab0795fd420657f
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
+  paper-onboarding: fede1799b1da6988f3788e3b71654583c6f3bce1
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
 
-PODFILE CHECKSUM: 996ee51bbd2f619c8b462911bb395c99c31cf006
+PODFILE CHECKSUM: 6e9166d68c0fbb28869575924f2022891d52e9e9
 
 COCOAPODS: 1.10.0
