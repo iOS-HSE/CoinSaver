@@ -14,6 +14,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var emailInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Sign Up"
@@ -43,6 +44,7 @@ class SignUpViewController: UIViewController {
                         // append user to database
                         let dbref = Database.database().reference().child("user")
                         dbref.child(result.user.uid).updateChildValues(["login":username, "email":email])
+                        BasicUserSettings.userEmail = email
                     }
                 }else{
                     print ("error")
@@ -56,19 +58,16 @@ class SignUpViewController: UIViewController {
         return true
     }
     
-    @IBAction func signUpAction(_ sender: Any) { // Button Next pressed
-        if signingUp(){
-            performSegue(withIdentifier: "signupConfirm", sender: nil)
+    @IBAction func signUpAction(_ sender: Any) { 
+        if signingUp() {
+                self.performSegue(withIdentifier: "fromSignUp", sender: nil)
         }
     }
-    
 
 }
 
-extension SignUpViewController:UITextFieldDelegate{
+extension SignUpViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if signingUp(){
-        performSegue(withIdentifier: "signupConfirm", sender: nil)}
         return true
     }
 }

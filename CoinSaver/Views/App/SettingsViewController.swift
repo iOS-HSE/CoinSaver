@@ -23,4 +23,10 @@ class SettingsViewController: TabItemViewController {
         }
         performSegue(withIdentifier: "toAuth", sender: nil)
     }
+    
+    @IBAction func reset(_ sender: UIButton) {
+        BasicUserSettings.isLoggedIn = false
+        BasicUserSettings.isFirstLaunch = true
+    }
+    
 }

@@ -19,6 +19,11 @@ class OnboardingScreenViewController: UIViewController{
         
     @IBOutlet weak var getStartedButton: UIButton!
     
+    
+    @IBAction func goToGetStarted(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toGetStarted", sender: nil)
+    }
+    
     let screens = [
         OnboardingItemInfo(informationImage: UIImage(named: "save_up")!, title: "Calc your expenses", description: "Icing lemon drops tootsie roll sugar plum. Cheesecake biscuit cupcake chocolate bar pudding chocolate cake. Danish donut sweet toffee.", pageIcon: UIImage(named: "mini_coin")!, color: background, titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         OnboardingItemInfo(informationImage: UIImage(named: "statistics")!, title: "Learn you expenses", description: "Icing lemon drops tootsie roll sugar plum. Cheesecake biscuit cupcake chocolate bar pudding chocolate cake. Danish donut sweet toffee.", pageIcon: UIImage(named: "mini_coin")!, color: background, titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
@@ -27,6 +32,7 @@ class OnboardingScreenViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         onboardingView.dataSource = self
         onboardingView.delegate = self
     }

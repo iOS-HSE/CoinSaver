@@ -13,13 +13,19 @@ class AuthViewController: UIViewController {
     @IBAction func debugOnboarding(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Onboarding", bundle: nil)
         let onboarding = sb.instantiateInitialViewController() as! OnboardingScreenViewController
+        
         present(onboarding, animated: true)
+    }
+    
+    
+    @IBAction func resetDefaults(_ sender: Any) {
+        BasicUserSettings.isFirstLaunch = true
+        BasicUserSettings.isLoggedIn = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Authentication"
-        // Do any additional setup after loading the view.
     }
     
 

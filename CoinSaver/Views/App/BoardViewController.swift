@@ -58,6 +58,7 @@ class BoardViewController: TabItemViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.navigationItem.title = "Board"
         
         self.initTopCostsChart()

@@ -17,7 +17,7 @@ class GoalCardFormPopup: UIViewController, UITableViewDelegate, UITableViewDataS
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "dependentCostCell", for: indexPath) as! GoalCardFormPopupCell
         
-        cell.dependentCostLabel.text = Array(Consts.dependentCosts.keys)[indexPath.row]
+        cell.dependentCostLabel.text = Consts.dependentCosts[indexPath.row]
         cell.isDependent.setOn(false, animated: true)
         
         return cell
