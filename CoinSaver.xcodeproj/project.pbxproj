@@ -30,6 +30,7 @@
 		B811D50EAD2B2C5F0CAC8307 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */; };
 		C339B0DD257167FC004D0B69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */; };
 		C3F7B84D25837A13009DC475 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */; };
+		C3F7B85225867A8C009DC475 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7B85125867A8C009DC475 /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3F7B85125867A8C009DC475 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
 				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
 				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
+				C3F7B85125867A8C009DC475 /* CategoryCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */,
+				C3F7B85225867A8C009DC475 /* CategoryCollectionViewCell.swift in Sources */,
 				2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */,
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
 				2EA0064EF8B61CE34F9B9267 /* SceneDelegate.swift in Sources */,
