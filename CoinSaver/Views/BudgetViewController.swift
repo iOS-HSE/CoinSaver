@@ -76,7 +76,8 @@ class BudgetViewController: TabItemViewController {
                     showAlert(errorMessage: "Check your internet connection!")
                 }
                 else{
-                    showAlert(errorMessage: "Spent \(spendingSum) on \(selectedCategory?.type)")
+                    let category = selectedCategory?.type ?? "nothing"
+                    showAlert(errorMessage: "Spent \(spendingSum) on \(category)")
                 }
                 
             }
