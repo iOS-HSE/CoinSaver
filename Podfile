@@ -12,7 +12,10 @@ pod 'Firebase/Core'
 # Add the pods for any other Firebase products you want to use in your app
 # For example, to use Firebase Authentication and Cloud Firestore
 pod 'Firebase/Auth'
-pod 'Firebase/Database' 
+pod 'Firebase/Database'
+pod 'Charts'
+pod 'paper-onboarding'
+pod "MonthYearPicker", '~> 4.0.2'
   target 'CoinSaverTests' do
     inherit! :search_paths
     # Pods for testing

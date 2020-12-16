@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2257103484157F948B4027D6 /* Pods_CoinSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */; };
 		2EA0009AAB6C8B3E274985C6 /* CoinSaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00C65255734D68C5B0A61 /* CoinSaverUITests.swift */; };
 		2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00697FFD3420274800FBC /* AppDelegate.swift */; };
 		2EA005A303AE118B614CACA4 /* CoinSaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA0035FBE7210EA6160042E /* CoinSaverTests.swift */; };
 		2EA0064EF8B61CE34F9B9267 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00DB429D707431985A63B /* SceneDelegate.swift */; };
 		2EA0096B271B8BF8D4359EF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA00549E05281F38E2817B7 /* ViewController.swift */; };
 		2EA00A24C1B048C2794D0BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EA006CE0C0EC68597CBA2B7 /* Assets.xcassets */; };
-		2EA00A43AEB9558D5D6BA550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA005F57D24AFB44D504A46 /* LaunchScreen.storyboard */; };
-		2EA00B4A96EF7865E3D5B2FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EA002F550F486A58546C7CB /* Main.storyboard */; };
+		43D27296306B415B41864237 /* Pods_CoinSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */; };
+		5217BE212585143B000FDEDA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217BE202585143B000FDEDA /* OnboardingView.swift */; };
+		5217BE25258514B5000FDEDA /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5217BE24258514B5000FDEDA /* Onboarding.storyboard */; };
+		5217BE4025854A34000FDEDA /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217BE3F25854A34000FDEDA /* GetStartedViewController.swift */; };
+		5217BE4525854D1B000FDEDA /* CostCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217BE4425854D1B000FDEDA /* CostCategoryCell.swift */; };
+		5217BE4B25854EA7000FDEDA /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5217BE4A25854EA7000FDEDA /* Consts.swift */; };
 		521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813D5255F19BF00489CE9 /* SignInViewController.swift */; };
 		521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813DD255F19D700489CE9 /* SignUpViewController.swift */; };
 		521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521813E5255F1B4F00489CE9 /* AuthViewController.swift */; };
+		521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A26B42583EDF30085725A /* GoalFormPopup.storyboard */; };
+		521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */; };
+		521A26C52584109C0085725A /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A26C42584109C0085725A /* NotificationNameExtension.swift */; };
+		523C9D1E25848F0700389A4C /* DatePickerPopupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */; };
+		523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C9D222584912800389A4C /* DatePickerPopup.swift */; };
 		5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BD9325617B360002A592 /* ConfirmViewController.swift */; };
 		5245BDA1256189770002A592 /* BoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA0256189770002A592 /* BoardViewController.swift */; };
 		5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA525618CDC0002A592 /* TabBarViewController.swift */; };
@@ -26,10 +34,28 @@
 		5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAF25619A600002A592 /* GoalsViewController.swift */; };
 		5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDB425619A6D0002A592 /* BudgetViewController.swift */; };
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
-		808A116D0229CCBDEE20C6F5 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */; };
-		B811D50EAD2B2C5F0CAC8307 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */; };
-		C339B0DD257167FC004D0B69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */; };
-		C3F7B84D25837A13009DC475 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */; };
+		528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6D82584A2D200FCA191 /* CircleView.swift */; };
+		528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6EE2584DC7000FCA191 /* IconColorChange.swift */; };
+		52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B42583934C000252E8 /* AuthorizationViewController.swift */; };
+		52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */; };
+		52A709CA25839952000252E8 /* GoalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709C925839952000252E8 /* GoalCardView.swift */; };
+		52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */; };
+		52A709F32583DB3F000252E8 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709F22583DB3F000252E8 /* FloatingButton.swift */; };
+		52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52B02A40257D66370024711E /* GoogleService-Info.plist */; };
+		52B8188B2586590F0055F0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B8188A2586590F0055F0F4 /* Main.storyboard */; };
+		52B81890258659D00055F0F4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8188F258659D00055F0F4 /* StartViewController.swift */; };
+		52C2981D2585F0A80073B876 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2981C2585F0A80073B876 /* IconButton.swift */; };
+		52C298262585F7A30073B876 /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C298252585F7A30073B876 /* HexColor.swift */; };
+		52C2982F25860E9B0073B876 /* BasicUserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2982E25860E9B0073B876 /* BasicUserSettings.swift */; };
+		52C2983B258615F00073B876 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2983A258615F00073B876 /* UserModel.swift */; };
+		52C298402586288A0073B876 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2983F2586288A0073B876 /* NavigationController.swift */; };
+		52C2984525862C330073B876 /* GetStartedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */; };
+		52C2984D25862E330073B876 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2984C25862E330073B876 /* AuthStoryboard.storyboard */; };
+		52C2986025863D0C0073B876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */; };
+		52C2986525863E880073B876 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2986425863E880073B876 /* HomeStoryboard.storyboard */; };
+		52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */; };
+		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
+		A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,25 +76,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
-		2EA00120861F5FF41C7F8623 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		131BEBB65364B94E88B3D9DA /* Pods-CoinSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.release.xcconfig"; sourceTree = "<group>"; };
+		17FF7D8DC92958D8E90E8A83 /* Pods-CoinSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2029712A98B5A659C1B8739F /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2EA0027DBDA06EFDB89EB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2EA0035FBE7210EA6160042E /* CoinSaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSaverTests.swift; sourceTree = "<group>"; };
 		2EA00445D5C9D719B304676D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		2EA00549E05281F38E2817B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2EA00697FFD3420274800FBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EA006CE0C0EC68597CBA2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2EA0072AE437B16CC13523ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EA0083F1BC9673C9D251EA3 /* CoinSaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinSaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA00B5A5B916EEC84147852 /* CoinSaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinSaverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EA00C65255734D68C5B0A61 /* CoinSaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinSaverUITests.swift; sourceTree = "<group>"; };
 		2EA00DB429D707431985A63B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2EA00E5F6CFE49B640FBD61C /* CoinSaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinSaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2EA00FA56F0F8DC677B3D7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5217BE1A258513E7000FDEDA /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5217BE202585143B000FDEDA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		5217BE24258514B5000FDEDA /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Onboarding.storyboard; path = CoinSaver/Storyboards/Onboarding.storyboard; sourceTree = SOURCE_ROOT; };
+		5217BE3F25854A34000FDEDA /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		5217BE4425854D1B000FDEDA /* CostCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostCategoryCell.swift; sourceTree = "<group>"; };
+		5217BE4A25854EA7000FDEDA /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		521813D5255F19BF00489CE9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		521813DD255F19D700489CE9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		521813E5255F1B4F00489CE9 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		521A26B42583EDF30085725A /* GoalFormPopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalFormPopup.storyboard; sourceTree = "<group>"; };
+		521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardFormPopupCell.swift; sourceTree = "<group>"; };
+		521A26C42584109C0085725A /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationNameExtension.swift; path = CoinSaver/Views/App/Elements/NotificationNameExtension.swift; sourceTree = SOURCE_ROOT; };
+		523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePickerPopupStoryboard.storyboard; sourceTree = "<group>"; };
+		523C9D222584912800389A4C /* DatePickerPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerPopup.swift; sourceTree = "<group>"; };
 		5245BD9325617B360002A592 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		5245BDA0256189770002A592 /* BoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewController.swift; sourceTree = "<group>"; };
 		5245BDA525618CDC0002A592 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -76,15 +111,33 @@
 		5245BDAF25619A600002A592 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		5245BDB425619A6D0002A592 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
-		55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.release.xcconfig"; sourceTree = "<group>"; };
-		5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
-		C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaverTests.release.xcconfig"; path = "Target Support Files/Pods-CoinSaverTests/Pods-CoinSaverTests.release.xcconfig"; sourceTree = "<group>"; };
+		528EC6D82584A2D200FCA191 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = SOURCE_ROOT; };
+		528EC6EE2584DC7000FCA191 /* IconColorChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconColorChange.swift; sourceTree = "<group>"; };
+		52A709B42583934C000252E8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedCollectionViewCell.swift; sourceTree = "<group>"; };
+		52A709C925839952000252E8 /* GoalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardView.swift; sourceTree = "<group>"; };
+		52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCardFormPopup.swift; sourceTree = "<group>"; };
+		52A709F22583DB3F000252E8 /* FloatingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FloatingButton.swift; path = CoinSaver/Views/App/Elements/FloatingButton.swift; sourceTree = SOURCE_ROOT; };
+		52B02A40257D66370024711E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "CoinSaver/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		52B8187F258642250055F0F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B8188A2586590F0055F0F4 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		52B8188F258659D00055F0F4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		52C2981C2585F0A80073B876 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		52C298252585F7A30073B876 /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+		52C2982E25860E9B0073B876 /* BasicUserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUserSettings.swift; sourceTree = "<group>"; };
+		52C2983A258615F00073B876 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		52C2983F2586288A0073B876 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStartedStoryboard.storyboard; sourceTree = "<group>"; };
+		52C2984C25862E330073B876 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../.Trash/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52C2986425863E880073B876 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewController.swift; sourceTree = "<group>"; };
+		99BB027AB7D3FDEC0DCAC269 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EFEFDDE3AB52C546ADC6D7B /* Pods-CoinSaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.release.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.release.xcconfig"; sourceTree = "<group>"; };
+		A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
+		BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				808A116D0229CCBDEE20C6F5 /* Pods_CoinSaverTests.framework in Frameworks */,
+				7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B811D50EAD2B2C5F0CAC8307 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */,
+				A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,13 +161,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2257103484157F948B4027D6 /* Pods_CoinSaver.framework in Frameworks */,
+				43D27296306B415B41864237 /* Pods_CoinSaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0732DE0E826B9289499B4374 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */,
+				9EFEFDDE3AB52C546ADC6D7B /* Pods-CoinSaver.release.xcconfig */,
+				99BB027AB7D3FDEC0DCAC269 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */,
+				2029712A98B5A659C1B8739F /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */,
+				17FF7D8DC92958D8E90E8A83 /* Pods-CoinSaverTests.debug.xcconfig */,
+				131BEBB65364B94E88B3D9DA /* Pods-CoinSaverTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2EA0011D8EEA6D54CCC691C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,15 +212,16 @@
 		2EA00C96E44106F201DFE980 /* CoinSaver */ = {
 			isa = PBXGroup;
 			children = (
+				52C29839258615E60073B876 /* Models */,
+				52C2982D25860E870073B876 /* UserDefaults */,
+				5217BE4925854E8F000FDEDA /* Consts */,
+				5217BE302585327F000FDEDA /* Storyboards */,
 				521813CC255F18F600489CE9 /* Views */,
-				2EA00120861F5FF41C7F8623 /* Info.plist */,
 				2EA006CE0C0EC68597CBA2B7 /* Assets.xcassets */,
 				2EA00697FFD3420274800FBC /* AppDelegate.swift */,
-				2EA005F57D24AFB44D504A46 /* LaunchScreen.storyboard */,
 				2EA00DB429D707431985A63B /* SceneDelegate.swift */,
+				52B8187F258642250055F0F4 /* Info.plist */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
-				C339B0DC257167FC004D0B69 /* GoogleService-Info.plist */,
-				2EA002F550F486A58546C7CB /* Main.storyboard */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -162,30 +229,45 @@
 		2EA00D68F376F88DB49994BF = {
 			isa = PBXGroup;
 			children = (
+				52B02A3C257D65FF0024711E /* Resources */,
 				5245BDC12561A3C50002A592 /* Extensions */,
 				2EA0011D8EEA6D54CCC691C7 /* Products */,
 				2EA00C96E44106F201DFE980 /* CoinSaver */,
 				2EA0026881BA21A57062B56A /* CoinSaverTests */,
 				2EA00B41B84C651D9B78D068 /* CoinSaverUITests */,
-				C7F05D0C169BBDC271283EB2 /* Pods */,
-				657F403A6BD7A0D19EC7B64C /* Frameworks */,
+				0732DE0E826B9289499B4374 /* Pods */,
+				8F64DBB02B631CB251A2ED94 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		5217BE302585327F000FDEDA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */,
+				5217BE24258514B5000FDEDA /* Onboarding.storyboard */,
+				521A26B42583EDF30085725A /* GoalFormPopup.storyboard */,
+				523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */,
+				52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */,
+				52C2984C25862E330073B876 /* AuthStoryboard.storyboard */,
+				52C2986425863E880073B876 /* HomeStoryboard.storyboard */,
+				52B8188A2586590F0055F0F4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5217BE4925854E8F000FDEDA /* Consts */ = {
+			isa = PBXGroup;
+			children = (
+				5217BE4A25854EA7000FDEDA /* Consts.swift */,
+			);
+			path = Consts;
 			sourceTree = "<group>";
 		};
 		521813CC255F18F600489CE9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				521813D5255F19BF00489CE9 /* SignInViewController.swift */,
-				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
-				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
-				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
-				C3F7B84C25837A13009DC475 /* GetStartedCollectionViewCell.swift */,
-				5245BDA0256189770002A592 /* BoardViewController.swift */,
-				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
-				5245BDAA256198270002A592 /* SettingsViewController.swift */,
-				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
-				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
-				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
+				52A709DC2583D61A000252E8 /* App */,
+				52A709DB2583D5EF000252E8 /* Authorization */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,31 +275,117 @@
 		5245BDC12561A3C50002A592 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				52A709F22583DB3F000252E8 /* FloatingButton.swift */,
+				521A26C42584109C0085725A /* NotificationNameExtension.swift */,
+				528EC6D82584A2D200FCA191 /* CircleView.swift */,
+				528EC6EE2584DC7000FCA191 /* IconColorChange.swift */,
+				52C2981C2585F0A80073B876 /* IconButton.swift */,
+				52C298252585F7A30073B876 /* HexColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		657F403A6BD7A0D19EC7B64C /* Frameworks */ = {
+		52A709DB2583D5EF000252E8 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				BA82BF5CBD89C51153A28840 /* Pods_CoinSaver.framework */,
-				C5C3642C3A92AAE0F24A389A /* Pods_CoinSaver_CoinSaverUITests.framework */,
-				BE98482F89624826D04F0546 /* Pods_CoinSaverTests.framework */,
+				52A709B42583934C000252E8 /* AuthorizationViewController.swift */,
+				52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */,
+				521813D5255F19BF00489CE9 /* SignInViewController.swift */,
+				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
+				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
+				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
 			);
-			name = Frameworks;
+			path = Authorization;
 			sourceTree = "<group>";
 		};
-		C7F05D0C169BBDC271283EB2 /* Pods */ = {
+		52A709DC2583D61A000252E8 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */,
-				55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */,
-				5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */,
-				9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */,
-				2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */,
-				D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */,
+				52F7E1BD258512CD0095D9D7 /* Onboarding */,
+				52A709DE2583D745000252E8 /* Popup */,
+				52B02A56257D69E20024711E /* Elements */,
+				52A709DD2583D637000252E8 /* Base */,
+				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
+				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
+				5245BDAA256198270002A592 /* SettingsViewController.swift */,
+				5245BDA0256189770002A592 /* BoardViewController.swift */,
 			);
-			path = Pods;
+			path = App;
+			sourceTree = "<group>";
+		};
+		52A709DD2583D637000252E8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
+				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
+				52C2983F2586288A0073B876 /* NavigationController.swift */,
+				52B8188F258659D00055F0F4 /* StartViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		52A709DE2583D745000252E8 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				52A709EA2583DA2C000252E8 /* GoalCardFormPopup.swift */,
+				523C9D222584912800389A4C /* DatePickerPopup.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		52B02A3C257D65FF0024711E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52B02A40257D66370024711E /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52B02A56257D69E20024711E /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				52A709C925839952000252E8 /* GoalCardView.swift */,
+				521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */,
+				5217BE202585143B000FDEDA /* OnboardingView.swift */,
+				5217BE4425854D1B000FDEDA /* CostCategoryCell.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		52C2982D25860E870073B876 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				52C2982E25860E9B0073B876 /* BasicUserSettings.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		52C29839258615E60073B876 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52C2983A258615F00073B876 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52F7E1BD258512CD0095D9D7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */,
+				5217BE3F25854A34000FDEDA /* GetStartedViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8F64DBB02B631CB251A2ED94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5217BE1A258513E7000FDEDA /* paper_onboarding.framework */,
+				E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */,
+				A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */,
+				BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +395,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA006C6477609CD0983E193 /* Build configuration list for PBXNativeTarget "CoinSaverTests" */;
 			buildPhases = (
-				9FAEDF30FF354A67BAEE672D /* [CP] Check Pods Manifest.lock */,
+				8FBFFBA972FD5086518FA2D3 /* [CP] Check Pods Manifest.lock */,
 				2EA00D9D27D06E4DCE157FC5 /* Sources */,
 				2EA00108352EC086ABC91BA5 /* Frameworks */,
 				2EA00CF3A818C5A3AA611AD0 /* Resources */,
@@ -246,11 +414,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA00A8AA08F37D7C0A36A28 /* Build configuration list for PBXNativeTarget "CoinSaver" */;
 			buildPhases = (
-				7BCA692730423AAD55FF6AB6 /* [CP] Check Pods Manifest.lock */,
+				3D63F0F9CBBB5D97124AF9E3 /* [CP] Check Pods Manifest.lock */,
 				2EA003C2F702C7CA90700923 /* Sources */,
 				2EA00EE9819D076B62B2D53E /* Frameworks */,
 				2EA003DFDBB896EDAC1BF810 /* Resources */,
-				406A36BDE3C5B0DB538F9300 /* [CP] Embed Pods Frameworks */,
+				F82ACCE207C8C48016F35250 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,11 +433,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EA0055A8C0F7513403E8929 /* Build configuration list for PBXNativeTarget "CoinSaverUITests" */;
 			buildPhases = (
-				3B7A37E855FA90D8FD6738B2 /* [CP] Check Pods Manifest.lock */,
+				2A321C6B4A17C85BDD3AF3FE /* [CP] Check Pods Manifest.lock */,
 				2EA0070C377B35C08DF08151 /* Sources */,
 				2EA00C8464B3CF86D1F68A8A /* Frameworks */,
 				2EA00643C9D7F01CA6B8D027 /* Resources */,
-				3D2DEDF77947FCC18C32F742 /* [CP] Embed Pods Frameworks */,
+				7CD2DE6FA4265AC0CAB0DE0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,10 +482,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C2986025863D0C0073B876 /* LaunchScreen.storyboard in Resources */,
+				52B8188B2586590F0055F0F4 /* Main.storyboard in Resources */,
 				2EA00A24C1B048C2794D0BAE /* Assets.xcassets in Resources */,
-				C339B0DD257167FC004D0B69 /* GoogleService-Info.plist in Resources */,
-				2EA00A43AEB9558D5D6BA550 /* LaunchScreen.storyboard in Resources */,
-				2EA00B4A96EF7865E3D5B2FE /* Main.storyboard in Resources */,
+				52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */,
+				52C2984D25862E330073B876 /* AuthStoryboard.storyboard in Resources */,
+				52C2986525863E880073B876 /* HomeStoryboard.storyboard in Resources */,
+				521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */,
+				523C9D1E25848F0700389A4C /* DatePickerPopupStoryboard.storyboard in Resources */,
+				52C2984525862C330073B876 /* GetStartedStoryboard.storyboard in Resources */,
+				5217BE25258514B5000FDEDA /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +512,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3B7A37E855FA90D8FD6738B2 /* [CP] Check Pods Manifest.lock */ = {
+		2A321C6B4A17C85BDD3AF3FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,83 +534,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D2DEDF77947FCC18C32F742 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		406A36BDE3C5B0DB538F9300 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7BCA692730423AAD55FF6AB6 /* [CP] Check Pods Manifest.lock */ = {
+		3D63F0F9CBBB5D97124AF9E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,7 +556,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9FAEDF30FF354A67BAEE672D /* [CP] Check Pods Manifest.lock */ = {
+		7CD2DE6FA4265AC0CAB0DE0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FBFFBA972FD5086518FA2D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,6 +622,50 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F82ACCE207C8C48016F35250 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/MonthYearPicker/MonthYearPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonthYearPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoinSaver/Pods-CoinSaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -488,19 +674,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				521813DE255F19D700489CE9 /* SignUpViewController.swift in Sources */,
+				5217BE4B25854EA7000FDEDA /* Consts.swift in Sources */,
 				2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */,
+				5217BE4525854D1B000FDEDA /* CostCategoryCell.swift in Sources */,
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
+				52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */,
+				52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */,
+				52C298262585F7A30073B876 /* HexColor.swift in Sources */,
+				528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */,
+				52A709F32583DB3F000252E8 /* FloatingButton.swift in Sources */,
+				528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */,
+				52A709B72583934C000252E8 /* GetStartedCollectionViewCell.swift in Sources */,
 				2EA0064EF8B61CE34F9B9267 /* SceneDelegate.swift in Sources */,
+				52A709CA25839952000252E8 /* GoalCardView.swift in Sources */,
+				52C2981D2585F0A80073B876 /* IconButton.swift in Sources */,
 				5245BDAB256198270002A592 /* SettingsViewController.swift in Sources */,
 				5245BDA1256189770002A592 /* BoardViewController.swift in Sources */,
+				5217BE4025854A34000FDEDA /* GetStartedViewController.swift in Sources */,
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
+				52C2982F25860E9B0073B876 /* BasicUserSettings.swift in Sources */,
 				521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */,
 				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
+				52C298402586288A0073B876 /* NavigationController.swift in Sources */,
+				523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */,
 				521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */,
+				5217BE212585143B000FDEDA /* OnboardingView.swift in Sources */,
 				5245BD9425617B360002A592 /* ConfirmViewController.swift in Sources */,
-				C3F7B84D25837A13009DC475 /* GetStartedCollectionViewCell.swift in Sources */,
+				52B81890258659D00055F0F4 /* StartViewController.swift in Sources */,
+				52C2983B258615F00073B876 /* UserModel.swift in Sources */,
 				5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */,
+				521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */,
 				2EA0096B271B8BF8D4359EF4 /* ViewController.swift in Sources */,
+				52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */,
+				521A26C52584109C0085725A /* NotificationNameExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,29 +741,10 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		2EA002F550F486A58546C7CB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EA0072AE437B16CC13523ED /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2EA005F57D24AFB44D504A46 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2EA00FA56F0F8DC677B3D7AC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		2EA0035860361AB68298F0BE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55E91E49DC6DF76515A0BF27 /* Pods-CoinSaver.release.xcconfig */;
+			baseConfigurationReference = 9EFEFDDE3AB52C546ADC6D7B /* Pods-CoinSaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -572,7 +759,7 @@
 		};
 		2EA0049E630B6A05F9FAF93C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AF3F7BFA6ECD509D32986E7 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */;
+			baseConfigurationReference = 99BB027AB7D3FDEC0DCAC269 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoinSaverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -586,7 +773,7 @@
 		};
 		2EA005B6185E275C4ED30020 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F2923347462547430D1EE5A /* Pods-CoinSaverTests.debug.xcconfig */;
+			baseConfigurationReference = 17FF7D8DC92958D8E90E8A83 /* Pods-CoinSaverTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinSaver.app/CoinSaver";
 				INFOPLIST_FILE = CoinSaverTests/Info.plist;
@@ -601,7 +788,7 @@
 		};
 		2EA005DD3FC3273E18E8EB4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9C6400D8E072469140ABBCA /* Pods-CoinSaverTests.release.xcconfig */;
+			baseConfigurationReference = 131BEBB65364B94E88B3D9DA /* Pods-CoinSaverTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CoinSaver.app/CoinSaver";
 				INFOPLIST_FILE = CoinSaverTests/Info.plist;
@@ -678,7 +865,7 @@
 		};
 		2EA00A8FAE6709F34E5B9C0B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9755998F5C3BBB3C1633A5D7 /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */;
+			baseConfigurationReference = 2029712A98B5A659C1B8739F /* Pods-CoinSaver-CoinSaverUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = CoinSaverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -692,7 +879,7 @@
 		};
 		2EA00C8D571435F0649BC9D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11BC1BAC2067918672CCFF70 /* Pods-CoinSaver.debug.xcconfig */;
+			baseConfigurationReference = A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

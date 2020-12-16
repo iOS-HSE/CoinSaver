@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mWm-6G-XRd">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="KRv-2f-3nU">
+            <objects>
+                <viewController id="mWm-6G-XRd" customClass="StartViewController" customModule="CoinSaver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jJL-0w-KbI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xU7-Ky-aKI"/>
+                        <color key="backgroundColor" red="0.97636336089999998" green="0.90634733440000004" blue="0.78756219149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="usB-82-s0p" kind="show" identifier="toAuth" id="rDS-fz-dC7"/>
+                        <segue destination="u0o-Ve-Tz7" kind="show" identifier="toHome" id="cHB-ud-nDr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cv-F9-vBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-546" y="42"/>
+        </scene>
+        <!--AuthStoryboard-->
+        <scene sceneID="Bv2-Vh-SNb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AuthStoryboard" id="usB-82-s0p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="crq-40-MXQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTO-rK-WWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="-94"/>
+        </scene>
+        <!--HomeStoryboard-->
+        <scene sceneID="Dpa-Ar-mk3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="u0o-Ve-Tz7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cTv-Mt-YVM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3l-iQ-p92" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="160"/>
+        </scene>
+    </scenes>
+</document>

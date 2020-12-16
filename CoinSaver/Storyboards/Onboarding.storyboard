@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MDi-5h-3st">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding Screen View Controller-->
+        <scene sceneID="Q6D-8d-9VO">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MDi-5h-3st" customClass="OnboardingScreenViewController" customModule="CoinSaver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pm1-4K-2Zx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fo9-qt-Bnh" customClass="PaperOnboarding" customModule="paper_onboarding">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h88-dZ-83D">
+                                <rect key="frame" x="131" y="531" width="113" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToGetStarted:" destination="MDi-5h-3st" eventType="touchUpInside" id="O4H-vs-YjV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rAm-kG-Vba"/>
+                        <color key="backgroundColor" red="0.99182909730000002" green="0.76747113469999995" blue="0.27540475129999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fo9-qt-Bnh" firstAttribute="top" secondItem="rAm-kG-Vba" secondAttribute="top" id="7CA-Rb-4CW"/>
+                            <constraint firstItem="rAm-kG-Vba" firstAttribute="bottom" secondItem="h88-dZ-83D" secondAttribute="bottom" constant="100" id="BzB-am-0c7"/>
+                            <constraint firstItem="fo9-qt-Bnh" firstAttribute="leading" secondItem="rAm-kG-Vba" secondAttribute="leading" id="Zt0-1k-aLa"/>
+                            <constraint firstItem="rAm-kG-Vba" firstAttribute="trailing" secondItem="fo9-qt-Bnh" secondAttribute="trailing" id="aAk-KG-dgh"/>
+                            <constraint firstItem="rAm-kG-Vba" firstAttribute="bottom" secondItem="fo9-qt-Bnh" secondAttribute="bottom" id="j0n-5j-miX"/>
+                            <constraint firstItem="h88-dZ-83D" firstAttribute="centerX" secondItem="Pm1-4K-2Zx" secondAttribute="centerX" id="mxy-Pj-awP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getStartedButton" destination="h88-dZ-83D" id="lMX-RQ-dRQ"/>
+                        <outlet property="onboardingView" destination="fo9-qt-Bnh" id="6TF-cu-VOi"/>
+                        <segue destination="WI9-a0-eNi" kind="show" identifier="toGetStarted" id="Kkg-ue-SDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mN-YA-nIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="96.7016491754123"/>
+        </scene>
+        <!--GetStartedStoryboard-->
+        <scene sceneID="pAM-ux-SJJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GetStartedStoryboard" id="WI9-a0-eNi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zUw-DZ-M2T"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rG7-c2-eS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
