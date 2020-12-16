@@ -1,0 +1,6 @@
+framework module Pods_CoinSaver {
+  umbrella header "Pods-CoinSaver-umbrella.h"
+
+  export *
+  module * { export * }
+}
