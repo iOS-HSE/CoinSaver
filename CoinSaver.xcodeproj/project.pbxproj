@@ -34,6 +34,7 @@
 		5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAF25619A600002A592 /* GoalsViewController.swift */; };
 		5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDB425619A6D0002A592 /* BudgetViewController.swift */; };
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
+		524DB437258A753B0030FA32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524DB436258A753B0030FA32 /* LaunchScreen.storyboard */; };
 		528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6D82584A2D200FCA191 /* CircleView.swift */; };
 		528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6EE2584DC7000FCA191 /* IconColorChange.swift */; };
 		52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A709B42583934C000252E8 /* AuthorizationViewController.swift */; };
@@ -51,7 +52,6 @@
 		52C298402586288A0073B876 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2983F2586288A0073B876 /* NavigationController.swift */; };
 		52C2984525862C330073B876 /* GetStartedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */; };
 		52C2984D25862E330073B876 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2984C25862E330073B876 /* AuthStoryboard.storyboard */; };
-		52C2986025863D0C0073B876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */; };
 		52C2986525863E880073B876 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C2986425863E880073B876 /* HomeStoryboard.storyboard */; };
 		52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */; };
 		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
@@ -111,6 +111,7 @@
 		5245BDAF25619A600002A592 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
 		5245BDB425619A6D0002A592 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
+		524DB436258A753B0030FA32 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528EC6D82584A2D200FCA191 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = SOURCE_ROOT; };
 		528EC6EE2584DC7000FCA191 /* IconColorChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconColorChange.swift; sourceTree = "<group>"; };
 		52A709B42583934C000252E8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +130,6 @@
 		52C2983F2586288A0073B876 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GetStartedStoryboard.storyboard; sourceTree = "<group>"; };
 		52C2984C25862E330073B876 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
-		52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../../../../.Trash/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C2986425863E880073B876 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewController.swift; sourceTree = "<group>"; };
 		99BB027AB7D3FDEC0DCAC269 /* Pods-CoinSaver-CoinSaverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver-CoinSaverUITests/Pods-CoinSaver-CoinSaverUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -243,11 +243,11 @@
 		5217BE302585327F000FDEDA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				52C2985F25863D0C0073B876 /* LaunchScreen.storyboard */,
 				5217BE24258514B5000FDEDA /* Onboarding.storyboard */,
 				521A26B42583EDF30085725A /* GoalFormPopup.storyboard */,
 				523C9D1D25848F0700389A4C /* DatePickerPopupStoryboard.storyboard */,
 				52C2984425862C330073B876 /* GetStartedStoryboard.storyboard */,
+				524DB436258A753B0030FA32 /* LaunchScreen.storyboard */,
 				52C2984C25862E330073B876 /* AuthStoryboard.storyboard */,
 				52C2986425863E880073B876 /* HomeStoryboard.storyboard */,
 				52B8188A2586590F0055F0F4 /* Main.storyboard */,
@@ -482,10 +482,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C2986025863D0C0073B876 /* LaunchScreen.storyboard in Resources */,
 				52B8188B2586590F0055F0F4 /* Main.storyboard in Resources */,
 				2EA00A24C1B048C2794D0BAE /* Assets.xcassets in Resources */,
 				52B02A41257D66370024711E /* GoogleService-Info.plist in Resources */,
+				524DB437258A753B0030FA32 /* LaunchScreen.storyboard in Resources */,
 				52C2984D25862E330073B876 /* AuthStoryboard.storyboard in Resources */,
 				52C2986525863E880073B876 /* HomeStoryboard.storyboard in Resources */,
 				521A26B52583EDF30085725A /* GoalFormPopup.storyboard in Resources */,
