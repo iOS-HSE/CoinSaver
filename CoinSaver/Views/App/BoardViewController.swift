@@ -60,22 +60,22 @@ class BoardViewController: TabItemViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Board"
         
-        self.initTopCostsChart()
-        self.totalCostsView.initCircleView()
+        //self.initTopCostsChart()
+        //self.totalCostsView.initCircleView()
         
-        NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: OperationQueue.main) {
-            (notification) in
+        //NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: OperationQueue.main) {
+          //  (notification) in
             
-            let datePickerPopup = notification.object as! DatePickerPopup
-            let formatter = DateFormatter()
-            formatter.dateStyle = .medium
-            self.dateLabel.text = formatter.string(from: datePickerPopup.datePicker.date)
+          //  let datePickerPopup = notification.object as! DatePickerPopup
+         //   let formatter = DateFormatter()
+        //    formatter.dateStyle = .medium
+        //    self.dateLabel.text = formatter.string(from: datePickerPopup.datePicker.date)
             
-        }
+        //}
         
-        updateTopCostsChartData()
+       // updateTopCostsChartData()
         
-        updateTotalCostsView(chane: getChange(changeValue: 2))
+       // updateTotalCostsView(chane: getChange(changeValue: 2))
     }
     
     func initTopCostsChart() {

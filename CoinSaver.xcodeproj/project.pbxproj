@@ -34,7 +34,6 @@
 		5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDA525618CDC0002A592 /* TabBarViewController.swift */; };
 		5245BDAB256198270002A592 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAA256198270002A592 /* SettingsViewController.swift */; };
 		5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDAF25619A600002A592 /* GoalsViewController.swift */; };
-		5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDB425619A6D0002A592 /* BudgetViewController.swift */; };
 		5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5245BDCD2561B5280002A592 /* TabItemViewController.swift */; };
 		528EC6D92584A2D200FCA191 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6D82584A2D200FCA191 /* CircleView.swift */; };
 		528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528EC6EE2584DC7000FCA191 /* IconColorChange.swift */; };
@@ -47,6 +46,8 @@
 		52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */; };
 		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
 		A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */; };
+		C374E22E2589F4F200350707 /* BudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374E22D2589F4F200350707 /* BudgetViewController.swift */; };
+		C374E2332589F50700350707 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374E2322589F50700350707 /* CategoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +104,6 @@
 		5245BDA525618CDC0002A592 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		5245BDAA256198270002A592 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5245BDAF25619A600002A592 /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
-		5245BDB425619A6D0002A592 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
 		5245BDCD2561B5280002A592 /* TabItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemViewController.swift; sourceTree = "<group>"; };
 		528EC6D82584A2D200FCA191 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = SOURCE_ROOT; };
 		528EC6EE2584DC7000FCA191 /* IconColorChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconColorChange.swift; sourceTree = "<group>"; };
@@ -119,6 +119,9 @@
 		A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C374E2282589F3A100350707 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/administrator/Documents/CoinSaver/CoinSaver/Views/Authorization/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
+		C374E22D2589F4F200350707 /* BudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewController.swift; sourceTree = "<group>"; };
+		C374E2322589F50700350707 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,6 +197,7 @@
 		2EA00C96E44106F201DFE980 /* CoinSaver */ = {
 			isa = PBXGroup;
 			children = (
+				C374E2282589F3A100350707 /* GoogleService-Info.plist */,
 				5217BE4925854E8F000FDEDA /* Consts */,
 				5217BE302585327F000FDEDA /* Storyboards */,
 				521813CC255F18F600489CE9 /* Views */,
@@ -263,11 +267,11 @@
 		52A709DB2583D5EF000252E8 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
+				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
 				52A709B42583934C000252E8 /* AuthorizationViewController.swift */,
 				52A709B52583934C000252E8 /* GetStartedCollectionViewCell.swift */,
 				521813D5255F19BF00489CE9 /* SignInViewController.swift */,
 				521813DD255F19D700489CE9 /* SignUpViewController.swift */,
-				521813E5255F1B4F00489CE9 /* AuthViewController.swift */,
 				5245BD9325617B360002A592 /* ConfirmViewController.swift */,
 			);
 			path = Authorization;
@@ -280,7 +284,6 @@
 				52A709DE2583D745000252E8 /* Popup */,
 				52B02A56257D69E20024711E /* Elements */,
 				52A709DD2583D637000252E8 /* Base */,
-				5245BDB425619A6D0002A592 /* BudgetViewController.swift */,
 				5245BDAF25619A600002A592 /* GoalsViewController.swift */,
 				5245BDAA256198270002A592 /* SettingsViewController.swift */,
 				5245BDA0256189770002A592 /* BoardViewController.swift */,
@@ -291,6 +294,7 @@
 		52A709DD2583D637000252E8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C374E22D2589F4F200350707 /* BudgetViewController.swift */,
 				5245BDA525618CDC0002A592 /* TabBarViewController.swift */,
 				5245BDCD2561B5280002A592 /* TabItemViewController.swift */,
 			);
@@ -317,6 +321,7 @@
 		52B02A56257D69E20024711E /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				C374E2322589F50700350707 /* CategoryCollectionViewCell.swift */,
 				52A709C925839952000252E8 /* GoalCardView.swift */,
 				521A26BC25840AD80085725A /* GoalCardFormPopupCell.swift */,
 				5217BE202585143B000FDEDA /* OnboardingView.swift */,
@@ -632,6 +637,7 @@
 				2EA00167458826BA1A340A2C /* AppDelegate.swift in Sources */,
 				5217BE4525854D1B000FDEDA /* CostCategoryCell.swift in Sources */,
 				5245BDCE2561B5280002A592 /* TabItemViewController.swift in Sources */,
+				C374E2332589F50700350707 /* CategoryCollectionViewCell.swift in Sources */,
 				52A709B62583934C000252E8 /* AuthorizationViewController.swift in Sources */,
 				52A709EB2583DA2C000252E8 /* GoalCardFormPopup.swift in Sources */,
 				528EC6EF2584DC7000FCA191 /* IconColorChange.swift in Sources */,
@@ -642,10 +648,10 @@
 				52A709CA25839952000252E8 /* GoalCardView.swift in Sources */,
 				5245BDAB256198270002A592 /* SettingsViewController.swift in Sources */,
 				5245BDA1256189770002A592 /* BoardViewController.swift in Sources */,
+				C374E22E2589F4F200350707 /* BudgetViewController.swift in Sources */,
 				5217BE4025854A34000FDEDA /* GetStartedViewController.swift in Sources */,
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
 				521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */,
-				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
 				523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */,
 				521813E6255F1B4F00489CE9 /* AuthViewController.swift in Sources */,
 				5217BE212585143B000FDEDA /* OnboardingView.swift in Sources */,
