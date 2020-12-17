@@ -60,14 +60,6 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
         NotificationCenter.default.addObserver(forName: .saveCard, object: nil, queue: OperationQueue.main) {
             (notification) in
             let goalCardForm = notification.object as! GoalCardFormPopup
-            var dc: [String] = []
-            for cell in goalCardForm.dependentCostsList.visibleCells {
-                let cell = cell as! GoalCardFormPopupCell
-                if cell.isDependent.isOn {
-                    dc.append(cell.dependentCostLabel.text!)
-                }
-            }
-            
             let newCard = self.createCard(form: goalCardForm)
             
             if (newCard != nil) {
