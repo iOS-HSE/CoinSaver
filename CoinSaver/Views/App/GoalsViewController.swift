@@ -79,9 +79,10 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
         }
         
         let goalTitle = form.goalTitleTextField.text
+        let goalLimit = Int(form.goalLimit.text!)!
         
         if goalTitle!.count > 0 && dc.count > 0 {
-            return GoalCard(Title: goalTitle!, dependentsCosts: dc)
+            return GoalCard(Title: goalTitle!, goalLimit: goalLimit, dependentsCosts: dc)
         }
         
         return nil
@@ -105,7 +106,7 @@ struct GoalCard {
     var Title: String
     var StatusLabel: String = "Status"
     var Status: GoalStatus = .notStarted
-    
+    var goalLimit: Int
     var dependentsCosts: [String]
 }
 
