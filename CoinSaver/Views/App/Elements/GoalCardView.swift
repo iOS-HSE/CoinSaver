@@ -15,6 +15,7 @@ class GoalCardView: UITableViewCell {
     @IBOutlet weak var statusValue: UILabel!
     @IBOutlet weak var goalProgress: UIProgressView!
     @IBOutlet weak var editCardButton: UIButton!
+    var cardLimit: Int?
     
     func fillCard(cardData: GoalCard) {
         cardTitle.text = cardData.Title
@@ -25,8 +26,6 @@ class GoalCardView: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
