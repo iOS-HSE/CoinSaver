@@ -15,18 +15,13 @@ class SettingsViewController: TabItemViewController {
         self.navigationItem.title = "Settings"
     }
     
-    @IBAction func logoutAction(_ sender: Any) {
-        do{
-            try Auth.auth().signOut()
-        }catch{
-            print ("Sign out Error")
-        }
-        performSegue(withIdentifier: "toAuth", sender: nil)
-    }
     
-    @IBAction func reset(_ sender: UIButton) {
+    @IBAction func logout(_ sender: UIButton) {
         BasicUserSettings.isLoggedIn = false
-        BasicUserSettings.isFirstLaunch = true
+        let storyboard = UIStoryboard(name: "AuthStoryboard", bundle: nil)
+        let authViewController = storyboard.instantiateViewController(identifier: "AuthNavController")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(authViewController)
+//        BasicUserSettings.isFirstLaunch = true
     }
-    
 }

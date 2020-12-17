@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SCv-m5-m4d">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FlG-cF-xVm">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -101,7 +101,6 @@
                     <connections>
                         <outlet property="loginInput" destination="M06-Zk-lgX" id="lgx-MG-h0a"/>
                         <outlet property="passwordInput" destination="4qv-oW-soh" id="ycA-HC-XOu"/>
-                        <segue destination="ICV-OS-f12" kind="show" identifier="signInSuccess" id="1nD-x5-EMs"/>
                         <segue destination="pRm-lL-2CH" kind="show" identifier="fromSignIn" id="8dv-jU-SSP"/>
                     </connections>
                 </viewController>
@@ -211,7 +210,6 @@
                         <outlet property="emailInput" destination="urw-wU-apA" id="6Uu-2l-7pL"/>
                         <outlet property="passwordInput" destination="LiT-gK-b5A" id="GEn-7n-oXc"/>
                         <outlet property="usernameInput" destination="rNn-PE-IHF" id="DQD-Ki-Xce"/>
-                        <segue destination="ICV-OS-f12" kind="show" identifier="signInSuccess" id="jTM-oX-LEl"/>
                         <segue destination="pRm-lL-2CH" kind="show" identifier="fromSignUp" id="MPK-E1-AkT"/>
                     </connections>
                 </viewController>
@@ -351,8 +349,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jTM-oX-LEl"/>
-        <segue reference="MPK-E1-AkT"/>
+        <segue reference="8dv-jU-SSP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo" width="128" height="128"/>

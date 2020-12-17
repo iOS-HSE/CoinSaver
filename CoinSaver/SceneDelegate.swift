@@ -13,13 +13,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-    guard let _ = (scene as? UIWindowScene) else { return }
+        guard let _ = (scene as? UIWindowScene) else { return }
+        self.updateRootVC()
+    }
+    
+    func updateRootVC(){
+        guard let window = self.window else { return }
+
+        let status = BasicUserSettings.isLoggedIn
+        var rootVC : UIViewController?
+        
+        window.makeKeyAndVisible()
+        
+        if(status == true){
+            rootVC = UIStoryboard(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "TabBar") as! TabBarViewController
+            self.window?.rootViewController = rootVC
+        }else{
+            rootVC = UIStoryboard(name: "AuthStoryboard", bundle: nil).instantiateViewController(withIdentifier: "AuthNavController") as! NavigationController
+            self.window?.rootViewController = rootVC
+        }
+        
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func changeRootViewController(_ vc: UIViewController, animated: Bool = true) {
+        guard let window = self.window else {
+            return
+        }
+        
+        window.rootViewController = vc
+        
+        UIView.transition(with: window,
+                              duration: 0.5,
+                              options: [.transitionCrossDissolve],
+                              animations: nil,
+                              completion: nil)
     }
 
 

@@ -13,7 +13,7 @@ extension UIView {
         layer.cornerRadius = frame.size.width/2
         clipsToBounds = true
 
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1.0
     }
     
