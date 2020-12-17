@@ -301,7 +301,7 @@
         <!--Board View Controller-->
         <scene sceneID="Y9K-hY-B0e">
             <objects>
-                <viewController id="dGe-hd-fcd" customClass="BoardViewController" customModule="CoinSaver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeBoard" id="dGe-hd-fcd" customClass="BoardViewController" customModule="CoinSaver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m0M-WH-wWH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

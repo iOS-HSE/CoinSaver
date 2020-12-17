@@ -230,6 +230,7 @@
 				2EA00DB429D707431985A63B /* SceneDelegate.swift */,
 				52B8187F258642250055F0F4 /* Info.plist */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
+				5264B08B258AAB3700C7E31F /* Switcher.swift */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -237,7 +238,6 @@
 		2EA00D68F376F88DB49994BF = {
 			isa = PBXGroup;
 			children = (
-				5264B08B258AAB3700C7E31F /* Switcher.swift */,
 				52B02A3C257D65FF0024711E /* Resources */,
 				5245BDC12561A3C50002A592 /* Extensions */,
 				2EA0011D8EEA6D54CCC691C7 /* Products */,

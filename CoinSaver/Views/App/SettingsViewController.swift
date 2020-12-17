@@ -18,7 +18,10 @@ class SettingsViewController: TabItemViewController {
     
     @IBAction func logout(_ sender: UIButton) {
         BasicUserSettings.isLoggedIn = false
-        Switcher.updateRootVC()
+        let storyboard = UIStoryboard(name: "AuthStoryboard", bundle: nil)
+        let authViewController = storyboard.instantiateViewController(identifier: "AuthNavController")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(authViewController)
 //        BasicUserSettings.isFirstLaunch = true
     }
 }

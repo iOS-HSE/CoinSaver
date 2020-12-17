@@ -70,7 +70,10 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
         BasicUserSettings.userModel = userModel
                 
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.performSegue(withIdentifier: "fromGetStarted", sender: nil)
+        let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
     }
     
     override func viewDidLoad() {

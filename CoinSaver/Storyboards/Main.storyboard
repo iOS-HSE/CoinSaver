@@ -17,10 +17,6 @@
                         <viewLayoutGuide key="safeArea" id="xU7-Ky-aKI"/>
                         <color key="backgroundColor" red="0.97636336089999998" green="0.90634733440000004" blue="0.78756219149999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <connections>
-                        <segue destination="usB-82-s0p" kind="show" identifier="toAuth" id="rDS-fz-dC7"/>
-                        <segue destination="u0o-Ve-Tz7" kind="show" identifier="toHome" id="cHB-ud-nDr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cv-F9-vBV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

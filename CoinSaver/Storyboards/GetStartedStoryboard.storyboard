@@ -135,22 +135,11 @@
                         <outlet property="budgetTextField" destination="dQr-6c-Cz6" id="rc1-So-Tpd"/>
                         <outlet property="costCategoriesCV" destination="CUq-yV-obz" id="1qZ-MF-d1A"/>
                         <outlet property="doneButton" destination="sUB-f5-cwp" id="1CP-Fd-F1o"/>
-                        <segue destination="Id5-W5-8Ei" kind="show" identifier="fromGetStarted" id="Nfl-yg-rXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O6-yc-WVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="76" y="14.842578710644679"/>
-        </scene>
-        <!--HomeStoryboard-->
-        <scene sceneID="INk-Yc-t5C">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="Id5-W5-8Ei" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HpN-fO-dBg"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0wO-4K-7pD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="755" y="14"/>
         </scene>
     </scenes>
     <resources>
