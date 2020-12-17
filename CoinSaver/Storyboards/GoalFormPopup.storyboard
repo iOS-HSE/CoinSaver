@@ -100,6 +100,12 @@
                                     <constraint firstAttribute="width" constant="343" id="BM3-Qb-Y8V"/>
                                     <constraint firstAttribute="height" constant="428" id="syS-G9-AAc"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Bt-H9-BjO"/>

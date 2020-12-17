@@ -16,10 +16,10 @@ class StartViewController: UINavigationController {
         let b = BasicUserSettings.isFirstLaunch
         
         if BasicUserSettings.isLoggedIn {
-            self.performSegue(withIdentifier: "toHome", sender: nil)
+//            self.performSegue(withIdentifier: "toHome", sender: nil)
         }
         else {
-            self.performSegue(withIdentifier: "toAuth", sender: nil)
+//            self.performSegue(withIdentifier: "toAuth", sender: nil)
         }
         
     }

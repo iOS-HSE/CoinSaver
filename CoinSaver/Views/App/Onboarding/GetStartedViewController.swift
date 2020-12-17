@@ -7,6 +7,18 @@
 
 import UIKit
 
+class ErrorAlert {
+    let alert : UIAlertController
+    
+    init(alertMessage : String) {
+        self.alert = UIAlertController(title: "Error", message: alertMessage, preferredStyle: .alert)
+        self.alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+    }
+}
+
+let zeroCategoriesAlert = ErrorAlert(alertMessage: "Number of categories cannot be null")
+let nullBudgetAlert = ErrorAlert(alertMessage: "Budget cannot be null")
+
 class GetStartedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
 
@@ -42,12 +54,27 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
             }
         }
         
-        let userModel = UserModel(userEmail: BasicUserSettings.userEmail, userExpenseCategories: selectedCategories)
+        if selectedCategories.count == 0 {
+            present(zeroCategoriesAlert.alert, animated: true, completion: nil)
+            return
+        }
+        
+        if budgetTextField.text == "" {
+            present(nullBudgetAlert.alert, animated: true, completion: nil)
+            return
+        }
+        
+        let userModel = UserModel(userEmail: BasicUserSettings.userEmail,
+                                  userExpenseCategories: selectedCategories,
+                                  userBudget: Int(budgetTextField.text!)!)
         BasicUserSettings.userModel = userModel
+                
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.performSegue(withIdentifier: "fromGetStarted", sender: nil)
+        let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
