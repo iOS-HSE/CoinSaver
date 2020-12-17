@@ -56,6 +56,7 @@
 		52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */; };
 		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
 		A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */; };
+		C374E281258A948D00350707 /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374E280258A948D00350707 /* FBAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C374E280258A948D00350707 /* FBAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
 		E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -222,6 +224,7 @@
 				2EA00DB429D707431985A63B /* SceneDelegate.swift */,
 				52B8187F258642250055F0F4 /* Info.plist */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
+				C374E280258A948D00350707 /* FBAuth.swift */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				5245BDA625618CDC0002A592 /* TabBarViewController.swift in Sources */,
 				52C2982F25860E9B0073B876 /* BasicUserSettings.swift in Sources */,
 				521813D6255F19BF00489CE9 /* SignInViewController.swift in Sources */,
+				C374E281258A948D00350707 /* FBAuth.swift in Sources */,
 				5245BDB525619A6D0002A592 /* BudgetViewController.swift in Sources */,
 				52C298402586288A0073B876 /* NavigationController.swift in Sources */,
 				523C9D232584912800389A4C /* DatePickerPopup.swift in Sources */,
