@@ -18,8 +18,8 @@ struct CoinUser: Codable{
     var categories: [String]
     var FundsHistory: [String:Int]
     var SpendingHistory: [String:Int]
-    var CategorySpending: [String:[String: Int]]
-    var Goals: [String:[[String]:Int]]
+    var CategoryHistory: [String:[String: Int]]
+    var Goals: [String:[String:Int]]
 }
 
 extension Date {
@@ -57,7 +57,6 @@ class FDatabase{
                 do {
                     let json = try JSONDecoder().decode(CoinUser.self, from: data!)
                     self.user = json
-                    print("fetched \(self.user)")
                 } catch {
                     print("\(error)")
                 }
@@ -68,7 +67,7 @@ class FDatabase{
             }
             }).resume()
         do{
-            sleep (3)
+            sleep (2)
         }
         return self.user
     }
@@ -81,16 +80,17 @@ class FDatabase{
         return datef.string(from: date)
     }
     func setInfo(categories: [String], startBudget: Int){
-        user = CoinUser(balance: 0, categories: categories, FundsHistory: [getDateString():0], SpendingHistory: [getDateString():0], CategorySpending: [getDateString():[:]], Goals: ["" : [[""] : 0]])
+        user = CoinUser(balance: 0, categories: categories, FundsHistory: [getDateString():0], SpendingHistory: [getDateString():0], CategoryHistory: [getDateString():[:]], Goals: ["Empty" : ["Empty" : 0]])
         user?.categories.forEach({ (ctg) in
-            user?.CategorySpending[getDateString()]?[ctg] = 0
+            user?.CategoryHistory[getDateString()]?[ctg] = 0
      
         })
         userdbref.child("categories").setValue(categories)
         userdbref.child("balance").setValue(0)
         userdbref.child("FundsHistory").setValue(user?.FundsHistory)
         userdbref.child("SpendingHistory").setValue(user?.SpendingHistory)
-        userdbref.child("CategoryHistory").setValue(user?.CategorySpending)
+        userdbref.child("CategoryHistory").setValue(user?.CategoryHistory)
+        userdbref.child("Goals").setValue(user?.Goals)
         upBalance(sum: startBudget)
     }
     func setUsername(name: String){
@@ -99,6 +99,7 @@ class FDatabase{
     func upBalance(sum: Int){
         fetchData()
         let current = user?.balance ?? 0
+        user?.balance = current+sum
         print("in up balance\(current+sum)")
         userdbref.child("balance").setValue(current+sum)
         let strdate = getDateString()
@@ -108,20 +109,21 @@ class FDatabase{
     func setGoals(goals: [Goal]){ // To Test
         fetchData()
         for item in goals{
-            user?.Goals[item.name] = [item.categories:item.limit]
+            user?.Goals[item.name] = [item.categories.joined(separator: " "):item.limit]
         }
         userdbref.child("Goals").setValue(user?.Goals)
     }
     func spend(category: String, sum: Int){
         fetchData()
-        user?.balance -= sum
+        let curr = user?.balance ?? 0
+        user?.balance = curr - sum
         print("in down balance\(user?.balance ?? -1)")
         userdbref.child("balance").setValue(user?.balance)
         let strdate = getDateString()
         user?.SpendingHistory[strdate]! += sum
-        user?.CategorySpending[strdate]![category]! += sum
-        userdbref.child("FundsHistory").setValue(user?.SpendingHistory)
-        userdbref.child("CategoryHistory").setValue(user?.CategorySpending)
+        user?.CategoryHistory[strdate]![category]! += sum
+        userdbref.child("SpendingHistory").setValue(user?.SpendingHistory)
+        userdbref.child("CategoryHistory").setValue(user?.CategoryHistory)
     }
     func getBalance() -> Int{
         fetchData()
@@ -152,10 +154,13 @@ class FDatabase{
     }
     func getSpendingRate(date: String) -> [String:Int]{
         fetchData()
-        var categspendings = user?.CategorySpending[date]!
-        var categs = Array(categspendings!.keys)
+        var categspendings = user?.CategoryHistory[date] ?? [:]
+        if (categspendings == [:]){
+            return [:]
+        }
+        var categs = Array(categspendings.keys)
         var topcategs = categs.sort(by: {(s1, s2) in
-            if (categspendings![s1]! > categspendings![s2]!){
+            if (categspendings[s1]! > categspendings[s2]!){
                 return true
             }
             else{
@@ -166,7 +171,7 @@ class FDatabase{
         var limit = 3
         categs.forEach({(item) in
             if (limit > 0){
-                toresult[item] = categspendings![item]
+                toresult[item] = categspendings[item]
                 limit -= 0
             }
         })
@@ -177,9 +182,9 @@ class FDatabase{
         fetchData()
         var goalsdb = user?.Goals
         var retvaluse: [Goal] = []
-        goalsdb?.forEach({ (key: String, value: [[String] : Int]) in
+        goalsdb?.forEach({ (key: String, value: [String : Int]) in
             var cats = Array(value.keys)[0]
-            retvaluse.append(Goal(name: key, categories: cats, limit: value[cats]!))
+            retvaluse.append(Goal(name: key, categories: cats.split(separator: " ").map({t in String(t)}), limit: value[cats]!))
         })
         return retvaluse
     }

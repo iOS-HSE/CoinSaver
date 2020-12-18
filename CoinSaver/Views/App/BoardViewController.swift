@@ -30,16 +30,8 @@ class BoardViewController: TabItemViewController {
     @IBOutlet weak var percentSaved: UILabel!
     
     @IBOutlet weak var topCostsPieChart: PieChartView!
-    
-    var topCost1 = PieChartDataEntry(value: 0)
-    var topCost2 = PieChartDataEntry(value: 0)
-    var topCost3 = PieChartDataEntry(value: 0)
-    
-    var topCostsData = [
-        "tc1": 15,
-        "tc2": 25,
-        "tc3": 60
-    ]
+       
+    var topCostsData:[String:Int] = [:]
     
     let chartColors = [
         UIColor.red,
@@ -48,7 +40,7 @@ class BoardViewController: TabItemViewController {
     ]
     
     var topCostsEntries = [PieChartDataEntry]()
-    
+    let ref = FDatabase(email: BasicUserSettings.userEmail)
     @IBAction func selectDate(_ sender: UIButton) {
         let sb = UIStoryboard(name: "DatePickerPopupStoryboard", bundle: nil)
         let popup = sb.instantiateInitialViewController() as! DatePickerPopup
@@ -60,23 +52,45 @@ class BoardViewController: TabItemViewController {
         super.viewDidLoad()
 
         self.navigationItem.title = "Board"
-        
-        self.initTopCostsChart()
+        //ref.upBalance(sum: 400)
+        //ref.spend(category: "Health", sum: 90)
+        var balance = ref.getBalance()
+        var funds = ref.getTotalFunds()
+        var spendings = ref.getTotalSpendings()
+        var saved = "\(100 - Int(balance/spendings))%"
+        print("CAtegories:\(ref.getCategories())")
+        print("CAtegories:\(ref.getGoals())")
+    
         self.totalCostsView.initCircleView()
-        
+        self.totalSaved.text = balance.description
+        self.percentSaved.text = saved.description
+        updateTotalCostsView(chane: getChange(changeValue: 0))
+        initTopCostsChart()
         NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: OperationQueue.main) {
-            (notification) in
+            [weak self] (notification) in
             
             let datePickerPopup = notification.object as! DatePickerPopup
             let formatter = DateFormatter()
             formatter.dateStyle = .medium
-            self.dateLabel.text = formatter.string(from: datePickerPopup.datePicker.date)
+            self?.dateLabel.text = formatter.string(from: datePickerPopup.datePicker.date)
+            var datestr = self?.ref.getDateString(drom: datePickerPopup.datePicker.date) ?? "2020-12"
+            var funds = self?.ref.getTotalFunds(date: datestr) ?? 1
+            var spendings = self?.ref.getTotalSpendings(date: datestr) ?? 1
+            var saved = "100%"
+            if (spendings != 0){
+                var saved = "\(100 - Int((funds-spendings)/spendings))%"
+            }
+            
+            self?.totalSaved.text = (funds-spendings).description
+            self?.percentSaved.text = saved.description
+            self?.topCostsData = self?.ref.getSpendingRate(date: datestr) ?? ["No data": 1000]
+            self?.initTopCostsChart()
+            self?.updateTopCostsChartData()
             
         }
-        
         updateTopCostsChartData()
-        
         updateTotalCostsView(chane: getChange(changeValue: 2))
+        
     }
     
     func initTopCostsChart() {
@@ -84,16 +98,10 @@ class BoardViewController: TabItemViewController {
         self.topCostsPieChart.legend.horizontalAlignment = .right
         self.topCostsPieChart.legend.orientation = .vertical
         self.topCostsPieChart.drawEntryLabelsEnabled = false
-        
-        self.topCostsEntries = [
-            topCost1,
-            topCost2,
-            topCost3
-        ]
-        
-        for (entry, data) in zip(topCostsEntries, topCostsData) {
-            entry.label = data.key
-            entry.value = Double(data.value)
+        self.topCostsEntries = []
+        self.topCostsData.forEach { (key: String, value: Int) in
+            topCostsEntries.append(PieChartDataEntry(value: Double(value), label: key))
+            print("\(Double(value))\(key)")
         }
     }
     
@@ -120,7 +128,8 @@ class BoardViewController: TabItemViewController {
         let chartDataSet = PieChartDataSet(entries: self.topCostsEntries, label: nil)
         let chartData = PieChartData(dataSet: chartDataSet)
         chartData.setValueTextColor(UIColor.black)
-        
+        print("CHARRT:\(chartData)")
+        print("CHARRTDS:\(chartData)")
         chartDataSet.colors = chartColors
         
         topCostsPieChart.data = chartData
