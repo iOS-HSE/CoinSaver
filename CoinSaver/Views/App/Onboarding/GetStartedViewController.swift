@@ -54,27 +54,16 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
             }
         }
         
-        if selectedCategories.count == 0 {
-            present(zeroCategoriesAlert.alert, animated: true, completion: nil)
-            return
-        }
-        
-        if budgetTextField.text == "" {
-            present(nullBudgetAlert.alert, animated: true, completion: nil)
-            return
-        }
-        
-        let userModel = UserModel(userEmail: BasicUserSettings.userEmail,
-                                  userExpenseCategories: selectedCategories,
-                                  userBudget: Int(budgetTextField.text!)!)
+        let userModel = UserModel(userEmail: BasicUserSettings.userEmail, userExpenseCategories: selectedCategories, userBudget: Int(budgetTextField.text ?? "0") ?? 0)
         BasicUserSettings.userModel = userModel
-                
+        let fx = Int(budgetTextField.text ?? "0") ?? 0
+        var dbref:FDatabase? = FDatabase(email: BasicUserSettings.userEmail)
+        dbref?.setInfo(categories: selectedCategories, startBudget: Int(budgetTextField.text ?? "0") ?? 0)
+        dbref = nil
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
-        
-        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
+        self.performSegue(withIdentifier: "fromGetStarted", sender: nil)
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
