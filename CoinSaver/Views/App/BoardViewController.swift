@@ -109,7 +109,6 @@ class BoardViewController: TabItemViewController {
         let funds = self.ref.getTotalFunds(date: datestr)
         let spendings = self.ref.getTotalSpendings(date: datestr)
         let saved = spendings == 0 ? 100 : 100 - (Float(spendings) / Float(funds) * 100)
-        print(saved)
         self.totalSaved.text = (funds - spendings).description
         self.percentSaved.text = "\(String(format: "%.2f", saved))%"
         self.topCostsData = self.ref.getOrderedSpendingRate(date: datestr)
