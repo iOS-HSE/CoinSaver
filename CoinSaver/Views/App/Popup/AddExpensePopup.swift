@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddExpensePopup: UIViewController {
+class AddExpensePopup: Popup {
 
     @IBOutlet weak var expenseAmount: UITextField!
     @IBOutlet weak var saveButton: UIButton!

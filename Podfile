@@ -15,7 +15,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Charts'
 pod 'paper-onboarding'
-pod "MonthYearPicker", '~> 4.0.2'
+pod 'MonthYearPicker'
+pod 'RxTheme'
+
   target 'CoinSaverTests' do
     inherit! :search_paths
     # Pods for testing

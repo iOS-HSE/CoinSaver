@@ -12,7 +12,7 @@ extension UIButton {
         let icon = UIImage(named: "add")
         let tintedImage = icon?.withRenderingMode(.alwaysTemplate)
         setImage(tintedImage, for: .normal)
-        tintColor = .darkGray
+        tintColor = .white
         
         layer.cornerRadius = frame.height / 2
         layer.shadowOpacity = 0.25
