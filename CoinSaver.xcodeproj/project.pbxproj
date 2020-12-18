@@ -63,6 +63,7 @@
 		52F7E1BF258512FF0095D9D7 /* OnboardingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7E1BE258512FF0095D9D7 /* OnboardingScreenViewController.swift */; };
 		7F2F5CFD1B8065BB3B69FE96 /* Pods_CoinSaverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */; };
 		A47635873BE570CFC7AC2EA0 /* Pods_CoinSaver_CoinSaverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */; };
+		C38704E4258CD14B004F1A10 /* FBAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38704E3258CD14B004F1A10 /* FBAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		A3B640845E5DDDFA95202D2E /* Pods_CoinSaver_CoinSaverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver_CoinSaverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D75779BF6977EEC6B2AF24 /* Pods-CoinSaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoinSaver.debug.xcconfig"; path = "Target Support Files/Pods-CoinSaver/Pods-CoinSaver.debug.xcconfig"; sourceTree = "<group>"; };
 		BB6C9D1C06036A4D7A82783B /* Pods_CoinSaverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38704E3258CD14B004F1A10 /* FBAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAuth.swift; sourceTree = "<group>"; };
 		E6F014E4B105BC1346F9CC19 /* Pods_CoinSaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoinSaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -237,6 +239,7 @@
 				52B8187F258642250055F0F4 /* Info.plist */,
 				2EA00549E05281F38E2817B7 /* ViewController.swift */,
 				5264B08B258AAB3700C7E31F /* Switcher.swift */,
+				C38704E3258CD14B004F1A10 /* FBAuth.swift */,
 			);
 			path = CoinSaver;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				52B81890258659D00055F0F4 /* StartViewController.swift in Sources */,
 				52C2983B258615F00073B876 /* UserModel.swift in Sources */,
 				5245BDB025619A600002A592 /* GoalsViewController.swift in Sources */,
+				C38704E4258CD14B004F1A10 /* FBAuth.swift in Sources */,
 				521A26BD25840AD80085725A /* GoalCardFormPopupCell.swift in Sources */,
 				2EA0096B271B8BF8D4359EF4 /* ViewController.swift in Sources */,
 				5264B07A258A8C8800C7E31F /* CostCategoryCellBudget.swift in Sources */,

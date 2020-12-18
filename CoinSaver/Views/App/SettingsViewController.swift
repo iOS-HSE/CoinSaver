@@ -12,7 +12,7 @@ class SettingsViewController: TabItemViewController {
 
     @IBOutlet weak var themeSwitcher: UISwitch!
     @IBOutlet weak var themeLabel: UILabel!
-    
+    let ref = FDatabase(email: BasicUserSettings.userEmail)
     override func setupTheme() {
         super.setupTheme()
         themeLabel.theme.textColor = themed { $0.labelTextColor }
@@ -23,6 +23,10 @@ class SettingsViewController: TabItemViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
+    }
+    
+    @IBAction func deleteData(_ sender: Any) {
+        ref.setInfo(categories: ["Health"], startBudget: 0)
     }
     
     @IBAction func logout(_ sender: UIButton) {

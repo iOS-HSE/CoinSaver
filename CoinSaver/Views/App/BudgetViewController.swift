@@ -17,7 +17,8 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
     
     var clickedCostCategoryName: String?
     var totalSpentNum: Int = 0
-    
+    let ref = FDatabase(email: BasicUserSettings.userEmail)
+    var categories: [String] = []
     override func setupTheme() {
         super.setupTheme()
         totalSpentTitle.theme.textColor = themed { $0.labelTextColor }
@@ -30,7 +31,7 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
         super.viewDidLoad()
         self.navigationItem.title = "Budget"
         self.updateTotalSpent()
-        
+        self.categories = ref.getCategories()
         NotificationCenter.default.addObserver(forName: .updateCategory, object: nil, queue: OperationQueue.main) {
             (notification) in
             let clickedCostCategory = notification.object as! CostCategoryCellBudget
@@ -44,9 +45,12 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
         NotificationCenter.default.addObserver(forName: .saveExpense, object: nil, queue: OperationQueue.main) {
             (notification) in
             let updateExpensePopup = notification.object as! AddExpensePopup
-            print("\(String(describing: self.clickedCostCategoryName)) was updated")
-            self.totalSpentNum += Int(updateExpensePopup.expenseAmount.text ?? "0") ?? 0
-            self.updateTotalSpent()
+            var spendcost = Int(updateExpensePopup.expenseAmount.text ?? "0") ?? 0
+            if (spendcost < self.ref.getBalance()){
+                self.totalSpentNum += spendcost
+                self.ref.spend(category: self.clickedCostCategoryName!, sum: spendcost)
+                self.updateTotalSpent()
+            }
         }
         setupTheme()
     }
@@ -60,7 +64,7 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
     }
     
     func updateTotalSpent() {
-        self.totalSpent.text = "\(self.totalSpentNum) / \(BasicUserSettings.userModel.userBudget)"
+        self.totalSpent.text = "\(ref.getTotalSpendings()) / \(ref.getTotalFunds())"
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -71,11 +75,10 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as! CostCategoryCellBudget
         
-        let dependentCost = BasicUserSettings.userModel.userExpenseCategories[indexPath.item]
-                
-        cell.categoryLabel.text = dependentCost
+        let dependentCost = self.categories[indexPath.item]
+        cell.categoryLabel.text = dependentCost 
         cell.categoryIcon.initIconButton(icon: Consts.dependentCostsIcons[dependentCost]!!, background: Consts.dependentCostsColors[dependentCost]!)
-            
+        
         return cell
     }
 

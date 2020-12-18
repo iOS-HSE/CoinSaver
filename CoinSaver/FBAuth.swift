@@ -49,7 +49,6 @@ class FDatabase{
     func fetchData() -> CoinUser?{
         guard let url = URL(string: "https://coinsaver-b197b.firebaseio.com/users/\(email).json") else
         {
-            print("Url issue")
             return nil
         }
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
@@ -66,9 +65,6 @@ class FDatabase{
                 print(error)
             }
             }).resume()
-        do{
-            sleep (2)
-        }
         return self.user
     }
     func getDateString() -> String{
@@ -100,28 +96,23 @@ class FDatabase{
         fetchData()
         let current = user?.balance ?? 0
         user?.balance = current+sum
-        print("in up balance\(current+sum)")
         userdbref.child("balance").setValue(current+sum)
         let strdate = getDateString()
         user?.FundsHistory[strdate]! += sum
         userdbref.child("FundsHistory").setValue(user?.FundsHistory)
     }
-    func setGoals(goals: [Goal]){ // To Test
-        fetchData()
-        for item in goals{
-            user?.Goals[item.name] = [item.categories.joined(separator: " "):item.limit]
-        }
+    func setGoal(goal: Goal){
+        user?.Goals[goal.name] = [goal.categories.joined(separator: " "):goal.limit]
         userdbref.child("Goals").setValue(user?.Goals)
     }
     func spend(category: String, sum: Int){
         fetchData()
         let curr = user?.balance ?? 0
         user?.balance = curr - sum
-        print("in down balance\(user?.balance ?? -1)")
         userdbref.child("balance").setValue(user?.balance)
         let strdate = getDateString()
         user?.SpendingHistory[strdate]! += sum
-        user?.CategoryHistory[strdate]![category]! += sum
+        user?.CategoryHistory[strdate]![category]? += sum 
         userdbref.child("SpendingHistory").setValue(user?.SpendingHistory)
         userdbref.child("CategoryHistory").setValue(user?.CategoryHistory)
     }
@@ -142,17 +133,13 @@ class FDatabase{
     func getTotalFunds(date: String) -> Int{
         return user?.FundsHistory[date] ?? 0
     }
-    func getSpendingRate() -> [String:Int]{ //return top 3 spendings
-        let strdate = getDateString()
-        return getSpendingRate(date: strdate)
-        
+    func getSpendingRate() -> [String:Int]{
+        fetchData()
+        return user?.CategoryHistory[self.getDateString()] ?? [:]
     }
-    func getSpendingRate(date: String) -> [String:Int]{
+    func getOrderedSpendingRate(date: String) -> [String:Int]{ //return 3 top spendings
         fetchData()
         var categspendings = user?.CategoryHistory[date] ?? [:]
-        if (categspendings == [:]){
-            return [:]
-        }
         var categs = Array(categspendings.keys)
         var topcategs = categs.sort(by: {(s1, s2) in
             if (categspendings[s1]! > categspendings[s2]!){
@@ -167,10 +154,9 @@ class FDatabase{
         categs.forEach({(item) in
             if (limit > 0){
                 toresult[item] = categspendings[item]
-                limit -= 0
+                limit -= 1
             }
         })
-            
         return toresult
     }
     func getGoals() -> [Goal]{

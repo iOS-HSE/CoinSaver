@@ -15,7 +15,7 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var goalCards: [GoalCard] = []
-    
+    let ref = FDatabase(email: BasicUserSettings.userEmail)
     override func setupTheme() {
         super.setupTheme()
         tableView.theme.backgroundColor = themed { $0.backgroundColor }
@@ -34,9 +34,7 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! GoalCardView
-        
         cell.fillCard(cardData: goalCards[indexPath.row])
-        
         return cell
     }
     
@@ -61,7 +59,6 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
         self.addButton.initFloatingButton()
         self.addButton.addTarget(self, action: #selector(showNewGoalFormPopup), for: .touchUpInside)
         self.tableView.tableFooterView = UIView()
-        
         NotificationCenter.default.addObserver(forName: .saveCard, object: nil, queue: OperationQueue.main) {
             (notification) in
             let goalCardForm = notification.object as! GoalCardFormPopup
@@ -71,7 +68,31 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
                 self.goalCards.append(newCard!)
                 self.tableView.reloadData()
             }
+            self.ref.setGoal(goal: Goal(name: newCard!.Title, categories: newCard!.dependentsCosts, limit: newCard!.goalLimit))
         }
+    }
+    
+    func updateAllDate(){
+        var goalsFromDB = ref.getGoals()
+        var categoriesSpendings = ref.getSpendingRate()
+        self.goalCards = []
+        goalsFromDB.forEach { (goal) in
+                if (goal.name != "Empty"){
+                var collectedSpendings = 0
+                categoriesSpendings.forEach { (key: String, value: Int) in
+                    if goal.categories.contains(key){
+                        collectedSpendings += value
+                    }
+                }
+                self.goalCards.append(GoalCard(Title: goal.name, StatusLabel: "spent \(collectedSpendings) / limit: \(goal.limit)", Status: (collectedSpendings>goal.limit) ? GoalStatus.achived : GoalStatus.inProgress , goalLimit: goal.limit, dependentsCosts: goal.categories))
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        updateAllDate()
+        self.tableView.reloadData()
     }
     
     func createCard(form: GoalCardFormPopup) -> GoalCard? {
@@ -100,9 +121,9 @@ func getStatusValue(status: GoalStatus) -> String {
     case .notStarted:
         return "Not started"
     case .inProgress:
-        return "In progress"
+        return "Expenses within the limit"
     case .achived:
-        return "Achived"
+        return "Expenses exceed the limit"
     default:
         return "Unknown status"
     }

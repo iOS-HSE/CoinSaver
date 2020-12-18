@@ -68,7 +68,8 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
                                   userExpenseCategories: selectedCategories,
                                   userBudget: Int(budgetTextField.text!)!)
         BasicUserSettings.userModel = userModel
-                
+        let ref = FDatabase(email: BasicUserSettings.userEmail)
+        ref.setInfo(categories: selectedCategories, startBudget: Int(budgetTextField.text!)!)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
