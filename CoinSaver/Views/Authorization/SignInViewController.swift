@@ -49,8 +49,13 @@ class SignInViewController: UIViewController {
         if signingIn() {
             Auth.auth().addStateDidChangeListener({(auth, user) in
                 if (user != nil){
-                    if (BasicUserSettings.isFirstLaunch) {
-                        BasicUserSettings.userEmail = user?.email
+                    var letGoToMain = false
+                    Database.database().reference().child("users").observeSingleEvent(of: .value) { (snap) in
+                        letGoToMain = snap.hasChild((user?.email?.replacingOccurrences(of: ".", with:"*"))!)
+                    }
+                    BasicUserSettings.userEmail = user?.email
+                    BasicUserSettings.isLoggedIn = true
+                    if (letGoToMain) {
                         self.performSegue(withIdentifier: "fromSignIn", sender: nil)
                     }
                     else {

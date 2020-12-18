@@ -75,6 +75,7 @@ class BoardViewController: TabItemViewController {
                 self?.dateLabel.text = formatter.string(from: datePickerPopup.datePicker.date)
                 var datestr = self?.ref.getDateString(drom: datePickerPopup.datePicker.date) ?? "2020-12"
                 self?.updateAllData(datestr: datestr)
+            
         }
         
         if BasicUserSettings.isDarkMode {
@@ -92,6 +93,7 @@ class BoardViewController: TabItemViewController {
         
         self.dateLabel.text = formatter.string(from: date)
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

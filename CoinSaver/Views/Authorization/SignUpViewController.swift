@@ -39,11 +39,6 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password, completion: { (result, error) in
                 if error == nil{
                     if let result = result{
-                        // if registration was OK
-                        print (result.user.uid)
-                        // append user to database
-                        let dbref = Database.database().reference().child("user")
-                        dbref.child(result.user.uid).updateChildValues(["login":username, "email":email])
                         BasicUserSettings.userEmail = email
                     }
                 }else{
