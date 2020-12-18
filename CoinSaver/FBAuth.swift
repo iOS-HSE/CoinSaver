@@ -13,87 +13,178 @@ struct Goal{
     var categories: [String]
     var limit:Int
 }
+struct CoinUser: Codable{
+    var balance: Int
+    var categories: [String]
+    var FundsHistory: [String:Int]
+    var SpendingHistory: [String:Int]
+    var CategorySpending: [String:[String: Int]]
+    var Goals: [String:[[String]:Int]]
+}
 
+extension Date {
+   func getFormattedDate(format: String) -> String {
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = format
+        return dateformat.string(from: self)
+    }
+}
 class FDatabase{
     var userdbref = Database.database().reference().child("users")
+    var email = ""
+    let datef = DateFormatter()
+    var user: CoinUser?
+    
     init(email: String){
-        userdbref = userdbref.child(email.replacingOccurrences(of: ".", with:"*"))
+        self.email = email.replacingOccurrences(of: ".", with:"*")
+        userdbref = userdbref.child(self.email)
+        fetchData()
     }
-    func setInfo(categories: [String], monthly: Int){
+    
+    init(email: String, nofetch: Bool){
+        self.email = email.replacingOccurrences(of: ".", with:"*")
+        userdbref = userdbref.child(self.email)
+    }
+    
+    func fetchData() -> CoinUser?{
+        guard let url = URL(string: "https://coinsaver-b197b.firebaseio.com/users/\(email).json") else
+        {
+            print("Url issue")
+            return nil
+        }
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+            if error == nil && data != nil {
+                do {
+                    let json = try JSONDecoder().decode(CoinUser.self, from: data!)
+                    self.user = json
+                    print("fetched \(self.user)")
+                } catch {
+                    print("\(error)")
+                }
+            }
+            else if error != nil
+            {
+                print(error)
+            }
+            }).resume()
+        do{
+            sleep (3)
+        }
+        return self.user
+    }
+    func getDateString() -> String{
+        let date = Date()
+        return date.getFormattedDate(format: "yyyy-MM")
+    }
+    func getDateString(drom date: Date)->String{
+        datef.dateFormat = "yyyy-MM"
+        return datef.string(from: date)
+    }
+    func setInfo(categories: [String], startBudget: Int){
+        user = CoinUser(balance: 0, categories: categories, FundsHistory: [getDateString():0], SpendingHistory: [getDateString():0], CategorySpending: [getDateString():[:]], Goals: ["" : [[""] : 0]])
+        user?.categories.forEach({ (ctg) in
+            user?.CategorySpending[getDateString()]?[ctg] = 0
+     
+        })
         userdbref.child("categories").setValue(categories)
-        userdbref.child("monthly").setValue(monthly)
         userdbref.child("balance").setValue(0)
-        userdbref.child("FundsHistory")
-        upBalance(sum: monthly)
-        
+        userdbref.child("FundsHistory").setValue(user?.FundsHistory)
+        userdbref.child("SpendingHistory").setValue(user?.SpendingHistory)
+        userdbref.child("CategoryHistory").setValue(user?.CategorySpending)
+        upBalance(sum: startBudget)
     }
     func setUsername(name: String){
         userdbref.child("login").setValue(name)
     }
     func upBalance(sum: Int){
-        let current = userdbref.value(forKey: "balance") as! Int
-        print(current)
+        fetchData()
+        let current = user?.balance ?? 0
+        print("in up balance\(current+sum)")
         userdbref.child("balance").setValue(current+sum)
-        let datef = DateFormatter()
-        //let dateres = datef.date(from: "MM\YY")
-        userdbref.child("FundsHistory")
+        let strdate = getDateString()
+        user?.FundsHistory[strdate]! += sum
+        userdbref.child("FundsHistory").setValue(user?.FundsHistory)
     }
-    func setGoals(goals: [Goal]){
-        let goalsref = userdbref.child("Goals")
-        for i in goals{
-            goalsref.child(i.name).child("categories").setValue(i.categories)
-            goalsref.child(i.name).child("limit").setValue(i.limit)
+    func setGoals(goals: [Goal]){ // To Test
+        fetchData()
+        for item in goals{
+            user?.Goals[item.name] = [item.categories:item.limit]
         }
+        userdbref.child("Goals").setValue(user?.Goals)
     }
     func spend(category: String, sum: Int){
-        
+        fetchData()
+        user?.balance -= sum
+        print("in down balance\(user?.balance ?? -1)")
+        userdbref.child("balance").setValue(user?.balance)
+        let strdate = getDateString()
+        user?.SpendingHistory[strdate]! += sum
+        user?.CategorySpending[strdate]![category]! += sum
+        userdbref.child("FundsHistory").setValue(user?.SpendingHistory)
+        userdbref.child("CategoryHistory").setValue(user?.CategorySpending)
     }
     func getBalance() -> Int{
-        return 7
-    }
-    func getUsername() -> String{
-        return userdbref.value(forKey: "login") as! String
+        fetchData()
+        return user?.balance ?? 0
     }
     func getTotalSpendings() -> Int{
-        return userdbref.value(forKey: "TotalSpendings") as! Int
+        fetchData()
+        let strdate = getDateString()
+        return user?.SpendingHistory[strdate] ?? 0
     }
     func getTotalFunds() -> Int{
-        return userdbref.value(forKey: "TotalFunds") as! Int
+        fetchData()
+        let strdate = getDateString()
+        return user?.FundsHistory[strdate] ?? 0
     }
     func getTotalSpendings(date: String) -> Int{
-        let history = userdbref.value(forKey: "SpendingHistory") as! [String: Int]
-        for sp in history{
-            if sp.key == date{
-                return sp.value
-            }
-        }
-        return -1
+        fetchData()
+        return user?.SpendingHistory[date] ?? 0
     }
     func getTotalFunds(date: String) -> Int{
-        let history = userdbref.value(forKey: "FundsHistory") as! [String: Int]
-        for sp in history{
-            if sp.key == date{
-                return sp.value
-            }
-        }
-        return -1
+        fetchData()
+        return user?.FundsHistory[date] ?? 0
+    }
+    func getSpendingRate() -> [String:Int]{ //return top 3 spendings
+        let strdate = getDateString()
+        return getSpendingRate(date: strdate)
         
     }
-    func getSpendingRate() -> [String: Int]{
-        return userdbref.value(forKey: "SpendingRate") as! [String: Int]
-    }
-    func getSpendingRate(date: String) -> [String: Int]{
-        let history = userdbref.value(forKey: "SpendingRate") as! [String: [String:Int]]
-        for sp in history{
-            if sp.key == date{
-                return sp.value
+    func getSpendingRate(date: String) -> [String:Int]{
+        fetchData()
+        var categspendings = user?.CategorySpending[date]!
+        var categs = Array(categspendings!.keys)
+        var topcategs = categs.sort(by: {(s1, s2) in
+            if (categspendings![s1]! > categspendings![s2]!){
+                return true
             }
-        }
-        return ["No info":0]
+            else{
+                return false
+            }
+        })
+        var toresult:[String:Int] = [:]
+        var limit = 3
+        categs.forEach({(item) in
+            if (limit > 0){
+                toresult[item] = categspendings![item]
+                limit -= 0
+            }
+        })
+            
+        return toresult
     }
     func getGoals() -> [Goal]{
-        let goals = userdbref.value(forKey: "Goals")
-        print(goals.debugDescription)
-        return []
+        fetchData()
+        var goalsdb = user?.Goals
+        var retvaluse: [Goal] = []
+        goalsdb?.forEach({ (key: String, value: [[String] : Int]) in
+            var cats = Array(value.keys)[0]
+            retvaluse.append(Goal(name: key, categories: cats, limit: value[cats]!))
+        })
+        return retvaluse
+    }
+    func getCategories() -> [String]{
+        fetchData()
+        return user?.categories ?? []
     }
 }
