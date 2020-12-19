@@ -15,6 +15,7 @@ final class BasicUserSettings {
         case isLoggedIn
         case isFirstLaunch
         case isDarkMode
+        case signupUsers
     }
     
     static var userModel: UserModel! {
@@ -96,6 +97,21 @@ final class BasicUserSettings {
             let key = SettingsKeys.isDarkMode.rawValue
             if let isDarkMode = newValue {
                 defaults.set(isDarkMode, forKey: key)
+            } else {
+                defaults.removeObject(forKey: key)
+            }
+        }
+    }
+    
+    static var signupUsers: [String : Bool]! {
+        get {
+            return UserDefaults.standard.object(forKey: SettingsKeys.signupUsers.rawValue) as? [String : Bool] ?? [:]
+        }
+        set {
+            let defaults = UserDefaults.standard
+            let key = SettingsKeys.signupUsers.rawValue
+            if let signupUsers = newValue {
+                defaults.set(signupUsers, forKey: key)
             } else {
                 defaults.removeObject(forKey: key)
             }

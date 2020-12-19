@@ -49,14 +49,16 @@ class SignInViewController: UIViewController {
         if signingIn() {
             Auth.auth().addStateDidChangeListener({(auth, user) in
                 if (user != nil){
-                    var letGoToMain = false
-                    Database.database().reference().child("users").observeSingleEvent(of: .value) { (snap) in
-                        letGoToMain = snap.hasChild((user?.email?.replacingOccurrences(of: ".", with:"*"))!)
+                    let signupUsers = BasicUserSettings.signupUsers!
+                    let userIsSignUp = signupUsers[(user?.email)!]
+                    
+                    if userIsSignUp == nil {
+                        return
                     }
-                    BasicUserSettings.userEmail = user?.email
-                    BasicUserSettings.isLoggedIn = true
-                    if (letGoToMain) {
+                    else if (!userIsSignUp!) {
                         self.performSegue(withIdentifier: "fromSignIn", sender: nil)
+                        BasicUserSettings.userEmail = user?.email
+                        BasicUserSettings.isLoggedIn = true
                     }
                     else {
                         BasicUserSettings.userEmail = user?.email

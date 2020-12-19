@@ -19,6 +19,7 @@ class ErrorAlert {
 let zeroCategoriesAlert = ErrorAlert(alertMessage: "Number of categories cannot be null")
 let nullBudgetAlert = ErrorAlert(alertMessage: "Budget cannot be null")
 
+
 class GetStartedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
 
@@ -27,6 +28,7 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var doneButton: UIButton!
     
     var userEmail: String?
+    let ref = FDatabase.getInstance()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Consts.dependentCosts.count
@@ -68,21 +70,23 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
                                   userExpenseCategories: selectedCategories,
                                   userBudget: Int(budgetTextField.text!)!)
         BasicUserSettings.userModel = userModel
-        let ref = FDatabase(email: BasicUserSettings.userEmail)
+    
         ref.setInfo(categories: selectedCategories, startBudget: Int(budgetTextField.text!)!)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
         
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(tabBarController)
+        
+        let email = BasicUserSettings.userEmail!
+        var signupUsers = BasicUserSettings.signupUsers!
+        signupUsers[email] = true
+        BasicUserSettings.signupUsers = signupUsers
+        BasicUserSettings.isLoggedIn = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BasicUserSettings.isFirstLaunch = true
-        BasicUserSettings.isLoggedIn = true
-        var mail = BasicUserSettings.userEmail
-        print(mail)
     }
 
 }

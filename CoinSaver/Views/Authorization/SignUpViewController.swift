@@ -25,7 +25,7 @@ class SignUpViewController: UIViewController {
     }
     
     func showAlert(errorMessage: String){
-        let alert = UIAlertController(title: "Ошибка", message: errorMessage, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: false, completion: nil)
     }
@@ -38,24 +38,27 @@ class SignUpViewController: UIViewController {
         if (!username.isEmpty && !email.isEmpty && !password.isEmpty){
             Auth.auth().createUser(withEmail: email, password: password, completion: { (result, error) in
                 if error == nil{
-                    if let result = result{
+                    if result != nil {
                         BasicUserSettings.userEmail = email
+                        var signupUsers = BasicUserSettings.signupUsers!
+                        signupUsers[email] = false
+                        BasicUserSettings.signupUsers = signupUsers
                     }
                 }else{
                     print ("error")
-                    self.showAlert(errorMessage: "Проверьте подключение к интернету")
+                    self.showAlert(errorMessage: "Check your Internet connection")
                     
                 }
             })
         }else{
-            showAlert(errorMessage: "Заполните все поля!")
+            showAlert(errorMessage: "You should fill all fields")
         }
         return true
     }
     
     @IBAction func signUpAction(_ sender: Any) { 
         if signingUp() {
-                self.performSegue(withIdentifier: "fromSignUp", sender: nil)
+            self.performSegue(withIdentifier: "fromSignUp", sender: nil)
         }
     }
 
