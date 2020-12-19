@@ -81,6 +81,8 @@ class GetStartedViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
         BasicUserSettings.isFirstLaunch = true
         BasicUserSettings.isLoggedIn = true
+        var mail = BasicUserSettings.userEmail
+        print(mail)
     }
 
 }

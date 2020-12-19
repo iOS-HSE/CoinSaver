@@ -13,9 +13,9 @@ struct DataChange {
     let color: UIColor?
 }
 
-let up = DataChange(icon: UIImage(named: "arrow_up"), color: UIColor.green)
-let down = DataChange(icon: UIImage(named: "arrow_down"), color: UIColor.red)
-let flat = DataChange(icon: UIImage(named: "dash"), color: UIColor.yellow)
+let up = DataChange(icon: UIImage(named: "arrow_up"), color: MaterialPalette.materialGreenDarker)
+let down = DataChange(icon: UIImage(named: "arrow_down"), color: MaterialPalette.materialRed)
+let flat = DataChange(icon: UIImage(named: "dash"), color: MaterialPalette.materialYellow)
 
 
 class BoardViewController: TabItemViewController {
@@ -48,23 +48,24 @@ class BoardViewController: TabItemViewController {
     }
     
     let chartColors = [
-        UIColor.red,
-        UIColor.yellow,
-        UIColor.green
+        MaterialPalette.materialRed,
+        MaterialPalette.materialYellow,
+        MaterialPalette.materialGreen
     ]
     
     var topCostsEntries = [PieChartDataEntry]()
-    let ref = FDatabase(email: BasicUserSettings.userEmail)
+    let ref = FDatabase.getInstance()
+    
     @IBAction func selectDate(_ sender: UIButton) {
         let sb = UIStoryboard(name: "DatePickerPopupStoryboard", bundle: nil)
         let popup = sb.instantiateInitialViewController() as! DatePickerPopup
         present(popup, animated: true)
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.totalCostsView.initCircleView()
+        
         self.navigationItem.title = "Board"
         NotificationCenter.default.addObserver(forName: .saveDate, object: nil, queue: OperationQueue.main) {
             [weak self] (notification) in
@@ -75,36 +76,43 @@ class BoardViewController: TabItemViewController {
                 var datestr = self?.ref.getDateString(drom: datePickerPopup.datePicker.date) ?? "2020-12"
                 self?.updateAllData(datestr: datestr)
         }
+        
+        if BasicUserSettings.isDarkMode {
+            themeService.switch(.dark)
+        } else {
+            themeService.switch(.light)
+        }
+        
+        sleep(2)
+        
+        let date = Date()
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "MMM d, yyyy"
+        
+        self.dateLabel.text = formatter.string(from: date)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         updateAllData(datestr: ref.getDateString())
-        do{
-            sleep(1)
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         updateAllData(datestr: ref.getDateString())
-        do{
-            sleep(1)
-        }
     }
     
     func updateAllData(datestr: String){
-        var funds = self.ref.getTotalFunds(date: datestr) ?? 1
-        var spendings = self.ref.getTotalSpendings(date: datestr) ?? 1
-        var saved = 100
-        if (spendings != 0){
-            saved = (100 - Int((funds-spendings)/funds))
-        }
-        self.totalSaved.text = (funds-spendings).description
-        self.percentSaved.text = "\(saved.description)%"
-        self.topCostsData = self.ref.getOrderedSpendingRate(date: datestr) ?? ["No data": 0]
+        let funds = self.ref.getTotalFunds(date: datestr)
+        let spendings = self.ref.getTotalSpendings(date: datestr)
+        let saved = spendings == 0 ? 100 : 100 - (Float(spendings) / Float(funds) * 100)
+        self.totalSaved.text = (funds - spendings).description
+        self.percentSaved.text = "\(String(format: "%.2f", saved))%"
+        self.topCostsData = self.ref.getOrderedSpendingRate(date: datestr)
         self.initTopCostsChart()
         self.updateTopCostsChartData()
+        self.updateTotalCostsView(change: getChange(changeValue: saved))
     }
     
     func initTopCostsChart() {
@@ -116,19 +124,21 @@ class BoardViewController: TabItemViewController {
         self.topCostsData.forEach { (key: String, value: Int) in
             topCostsEntries.append(PieChartDataEntry(value: Double(value), label: key))
         }
+        self.topCostsPieChart.data?.notifyDataChanged()
+        self.topCostsPieChart.notifyDataSetChanged()
     }
     
-    func updateTotalCostsView(chane: DataChange) {
-        self.changeIcon.image = chane.icon
-        self.changeIcon.setImageColor(color: chane.color!)
-        self.percentSaved.textColor = chane.color
+    func updateTotalCostsView(change: DataChange) {
+        self.changeIcon.image = change.icon
+        self.changeIcon.setImageColor(color: change.color!)
+        self.percentSaved.textColor = change.color
     }
     
-    func getChange(changeValue: Int) -> DataChange {
-        if changeValue == 0 {
+    func getChange(changeValue: Float) -> DataChange {
+        if changeValue == 50 {
             return flat
         }
-        else if changeValue > 0 {
+        else if changeValue > 50 {
             return up
         }
         else {

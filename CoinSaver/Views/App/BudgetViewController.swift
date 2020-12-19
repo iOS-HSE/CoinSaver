@@ -17,7 +17,7 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
     
     var clickedCostCategoryName: String?
     var totalSpentNum: Int = 0
-    let ref = FDatabase(email: BasicUserSettings.userEmail)
+    let dbRef = FDatabase.getInstance()
     var categories: [String] = []
     override func setupTheme() {
         super.setupTheme()
@@ -31,7 +31,7 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
         super.viewDidLoad()
         self.navigationItem.title = "Budget"
         self.updateTotalSpent()
-        self.categories = ref.getCategories()
+        self.categories = dbRef.getCategories()
         NotificationCenter.default.addObserver(forName: .updateCategory, object: nil, queue: OperationQueue.main) {
             (notification) in
             let clickedCostCategory = notification.object as! CostCategoryCellBudget
@@ -41,14 +41,14 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
             let popup = sb.instantiateInitialViewController() as! AddExpensePopup
             self.present(popup, animated: true)
         }
-        
+                
         NotificationCenter.default.addObserver(forName: .saveExpense, object: nil, queue: OperationQueue.main) {
             (notification) in
             let updateExpensePopup = notification.object as! AddExpensePopup
             var spendcost = Int(updateExpensePopup.expenseAmount.text ?? "0") ?? 0
-            if (spendcost < self.ref.getBalance()){
+            if (spendcost < self.dbRef.getBalance()){
                 self.totalSpentNum += spendcost
-                self.ref.spend(category: self.clickedCostCategoryName!, sum: spendcost)
+                self.dbRef.spend(category: self.clickedCostCategoryName!, sum: spendcost)
                 self.updateTotalSpent()
             }
         }
@@ -64,11 +64,11 @@ class BudgetViewController: TabItemViewController, UICollectionViewDataSource, U
     }
     
     func updateTotalSpent() {
-        self.totalSpent.text = "\(ref.getTotalSpendings()) / \(ref.getTotalFunds())"
+        self.totalSpent.text = "\(dbRef.getTotalSpendings()) / \(dbRef.getTotalFunds())"
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return BasicUserSettings.userModel.userExpenseCategories.count
+        return categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

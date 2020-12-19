@@ -54,6 +54,8 @@ class SignInViewController: UIViewController {
                         self.performSegue(withIdentifier: "fromSignIn", sender: nil)
                     }
                     else {
+                        BasicUserSettings.userEmail = user?.email
+                        BasicUserSettings.isLoggedIn = true
                         let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
                         let tabBarController = storyboard.instantiateViewController(identifier: "TabBar")
                         

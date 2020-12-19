@@ -12,7 +12,8 @@ class SettingsViewController: TabItemViewController {
 
     @IBOutlet weak var themeSwitcher: UISwitch!
     @IBOutlet weak var themeLabel: UILabel!
-    let ref = FDatabase(email: BasicUserSettings.userEmail)
+    let ref = FDatabase.getInstance()
+    
     override func setupTheme() {
         super.setupTheme()
         themeLabel.theme.textColor = themed { $0.labelTextColor }
@@ -23,6 +24,12 @@ class SettingsViewController: TabItemViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Settings"
+        
+        if BasicUserSettings.isDarkMode {
+            themeSwitcher.setOn(true, animated: false)
+        } else {
+            themeSwitcher.setOn(false, animated: false)
+        }
     }
     
     @IBAction func deleteData(_ sender: Any) {
@@ -41,8 +48,10 @@ class SettingsViewController: TabItemViewController {
     @IBAction func themeChanged(_ sender: UISwitch) {
         if sender.isOn {
             themeService.switch(.dark)
+            BasicUserSettings.isDarkMode = true
         } else {
             themeService.switch(.light)
+            BasicUserSettings.isDarkMode = false
         }
     }
 }

@@ -29,21 +29,26 @@ extension Date {
         return dateformat.string(from: self)
     }
 }
-class FDatabase{
+
+class FDatabase {
     var userdbref = Database.database().reference().child("users")
     var email = ""
     let datef = DateFormatter()
     var user: CoinUser?
     
+    private static var INSTANCE: FDatabase! = nil
+    
+    static func getInstance() -> FDatabase {
+        if (INSTANCE == nil) {
+            INSTANCE = FDatabase(email: BasicUserSettings.userEmail)
+        }
+        return INSTANCE
+    }
+    
     init(email: String){
         self.email = email.replacingOccurrences(of: ".", with:"*")
         userdbref = userdbref.child(self.email)
         fetchData()
-    }
-    
-    init(email: String, nofetch: Bool){
-        self.email = email.replacingOccurrences(of: ".", with:"*")
-        userdbref = userdbref.child(self.email)
     }
     
     func fetchData() -> CoinUser?{
@@ -139,7 +144,7 @@ class FDatabase{
     }
     func getOrderedSpendingRate(date: String) -> [String:Int]{ //return 3 top spendings
         fetchData()
-        var categspendings = user?.CategoryHistory[date] ?? [:]
+        let categspendings = user?.CategoryHistory[date] ?? [:]
         var categs = Array(categspendings.keys)
         var topcategs = categs.sort(by: {(s1, s2) in
             if (categspendings[s1]! > categspendings[s2]!){
@@ -161,10 +166,10 @@ class FDatabase{
     }
     func getGoals() -> [Goal]{
         fetchData()
-        var goalsdb = user?.Goals
+        let goalsdb = user?.Goals
         var retvaluse: [Goal] = []
         goalsdb?.forEach({ (key: String, value: [String : Int]) in
-            var cats = Array(value.keys)[0]
+            let cats = Array(value.keys)[0]
             retvaluse.append(Goal(name: key, categories: cats.split(separator: " ").map({t in String(t)}), limit: value[cats]!))
         })
         return retvaluse

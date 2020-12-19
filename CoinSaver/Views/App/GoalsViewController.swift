@@ -15,7 +15,7 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var tableView: UITableView!
     
     var goalCards: [GoalCard] = []
-    let ref = FDatabase(email: BasicUserSettings.userEmail)
+    let ref = FDatabase.getInstance()
     override func setupTheme() {
         super.setupTheme()
         tableView.theme.backgroundColor = themed { $0.backgroundColor }
@@ -72,9 +72,9 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    func updateAllDate(){
-        var goalsFromDB = ref.getGoals()
-        var categoriesSpendings = ref.getSpendingRate()
+    func updateAllData(){
+        let goalsFromDB = ref.getGoals()
+        let categoriesSpendings = ref.getSpendingRate()
         self.goalCards = []
         goalsFromDB.forEach { (goal) in
                 if (goal.name != "Empty"){
@@ -84,14 +84,16 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
                         collectedSpendings += value
                     }
                 }
-                self.goalCards.append(GoalCard(Title: goal.name, StatusLabel: "spent \(collectedSpendings) / limit: \(goal.limit)", Status: (collectedSpendings>goal.limit) ? GoalStatus.achived : GoalStatus.inProgress , goalLimit: goal.limit, dependentsCosts: goal.categories))
+                    
+                    let spentPercent = Float(collectedSpendings) / Float(goal.limit)
+                    self.goalCards.append(GoalCard(Title: goal.name, StatusLabel: "spent \(collectedSpendings) / limit: \(goal.limit)", Status: getStatus(value: spentPercent), goalLimit: goal.limit, dependentsCosts: goal.categories, progressPercent: spentPercent))
             }
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        updateAllDate()
+        updateAllData()
         self.tableView.reloadData()
     }
     
@@ -116,16 +118,24 @@ class GoalsViewController: TabItemViewController, UITableViewDelegate, UITableVi
 
 }
 
-func getStatusValue(status: GoalStatus) -> String {
-    switch status {
-    case .notStarted:
-        return "Not started"
-    case .inProgress:
-        return "Expenses within the limit"
-    case .achived:
-        return "Expenses exceed the limit"
-    default:
-        return "Unknown status"
+func getStatus(value: Float) -> GoalStatus {
+    if value == 0.0 {
+        return .notStarted
+    }
+    else if value < 0.5 {
+        return .good
+    }
+    else if value > 0.5 && value < 0.9 {
+        return .normal
+    }
+    else if value >= 0.9 && value < 1.0 {
+        return .dangerous
+    }
+    else if value >= 1.0 {
+        return .limit
+    }
+    else {
+        return .unknown
     }
 }
 
@@ -135,10 +145,14 @@ struct GoalCard {
     var Status: GoalStatus = .notStarted
     var goalLimit: Int
     var dependentsCosts: [String]
+    var progressPercent: Float = 0.0
 }
 
 enum GoalStatus {
     case notStarted
-    case inProgress
-    case achived
+    case good
+    case normal
+    case dangerous
+    case limit
+    case unknown
 }

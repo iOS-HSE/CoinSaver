@@ -58,4 +58,6 @@ struct MaterialPalette {
     static let materialOrange = UIColor(hex: 0xffb74d)
     static let materialBrown = UIColor(hex: 0xa1887f)
     static let materialTeal = UIColor(hex: 0x80cbc4)
+    static let materialGreenDarker = UIColor(hex: 0x4caf50)
+    static let materialBlack = UIColor(hex: 0x424242)
 }
